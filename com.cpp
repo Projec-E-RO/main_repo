@@ -4,24 +4,53 @@ serial::Serial ser;
 //MotorVar Motor1, Motor2;  // Motor1과 Motor2를 구분하여 사용
 
 // Get the low and high byte from short
+// Make short data from two bytes
+// RPM 값을 바이트로 변환하는 함수
+
 IByte Short2Byte(short sIn)
 {
     IByte Ret;
     Ret.byLow = sIn & 0xff;
-    Ret.byHigh = sIn >> 8 & 0xff;
+    Ret.byHigh = (sIn >> 8) & 0xff;
     return Ret;
 }
 
 // Make short data from two bytes
-int Byte2Short(BYTE byLow, BYTE byHigh)
+short Byte2Short(BYTE byLow, BYTE byHigh)
 {
-    return (byLow | (int)byHigh << 8);
+    // byHigh와 byLow를 결합하여 16비트 값을 생성
+    short value = ((((short) byHigh) << 8) | (short) byLow);
+    
+    // 부호 처리를 확인하기 위한 디버깅 코드
+    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Combined RPM value: %d", value);
+
+    // 부호 확장 처리 (16비트 값에서 음수나 양수가 올바르게 처리되는지 확인)
+    if (value < 0)
+    {
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Negative value detected: %d", value);
+    }
+
+    return value;
 }
+/*
+short Byte2Short(BYTE byLow, BYTE byHigh)
+{
+    // byLow와 byHigh를 결합하여 16비트 값 생성
+    short value = (short)((byHigh << 8) | byLow);
+
+    // 부호 처리를 확인하기 위한 디버깅 코드
+    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Combined RPM value: %d", value);
+
+    return value;
+}*/
+
 
 // Make long data from four bytes
 int Byte2LInt(BYTE byData1, BYTE byData2, BYTE byData3, BYTE byData4)
 {
-    return ((int)byData1 | (int)byData2 << 8 | (int)byData3 << 16 | (int)byData4 << 24);
+    // 부호 확장 및 범위 체크
+    int value = (int)byData1 | ((int)byData2 << 8) | ((int)byData3 << 16) | ((int)byData4 << 24);
+    return value;
 }
 
 // Initialize serial communication in ROS
@@ -57,49 +86,50 @@ int PutMdData(BYTE byPID, BYTE byMID, int id_num, int nArray[])
     for (j = 0; j < MAX_PACKET_SIZE; j++) Com.bySndBuf[j] = 0;
 
     Com.bySndBuf[0] = byMID;
-    Com.bySndBuf[1] = 0;
+    Com.bySndBuf[1] = 184;
     Com.bySndBuf[2] = id_num;
     Com.bySndBuf[3] = byPID;
 
     switch (byPID)
     {
-    case PID_REQ_PID_DATA:
-        byDataSize = 1;
-        byPidDataSize = 7;
+    case PID_REQ_PID_DATA: //4
+        byDataSize = 2;
+        byPidDataSize = 8;
         byTempDataSum = 0;
 
         Com.bySndBuf[4] = byDataSize;
         Com.bySndBuf[5] = (BYTE)nArray[0];
+        Com.bySndBuf[6] = (BYTE)nArray[1];  // RPM (high byte)
 
         for (i = 0; i < (byPidDataSize - 1); i++) byTempDataSum += Com.bySndBuf[i];
         Com.bySndBuf[byPidDataSize - 1] = ~(byTempDataSum) + 1; // check sum
 
         ser.write(Com.bySndBuf, byPidDataSize);
-
         break;
 
-    case PID_POSI_RESET:
-        byDataSize = 1;
-        byPidDataSize = 7;
+    case PID_POSI_RESET: // 13
+        byDataSize = 2;
+        byPidDataSize = 8;
         byTempDataSum = 0;
 
         Com.bySndBuf[4] = byDataSize;
-        Com.bySndBuf[5] = nArray[0];
+        Com.bySndBuf[5] = (BYTE)nArray[0];
+        Com.bySndBuf[6] = (BYTE)nArray[1];  // RPM (high byte)
 
         for (i = 0; i < (byPidDataSize - 1); i++) byTempDataSum += Com.bySndBuf[i];
         Com.bySndBuf[byPidDataSize - 1] = ~(byTempDataSum) + 1; // check sum
 
         ser.write(Com.bySndBuf, byPidDataSize);
-
         break;
 
-    case PID_COMMAND:
-        byDataSize = 1;
-        byPidDataSize = 7;
+    case PID_COMMAND: //10
+        byDataSize = 2;
+        byPidDataSize = 8;
         byTempDataSum = 0;
 
         Com.bySndBuf[4] = byDataSize;
-        Com.bySndBuf[5] = nArray[0];
+        Com.bySndBuf[5] = (BYTE)nArray[0];
+        Com.bySndBuf[6] = (BYTE)nArray[1];  // RPM (high byte)
 
         for (i = 0; i < (byPidDataSize - 1); i++) byTempDataSum += Com.bySndBuf[i];
         Com.bySndBuf[byPidDataSize - 1] = ~(byTempDataSum) + 1; // check sum
@@ -108,7 +138,7 @@ int PutMdData(BYTE byPID, BYTE byMID, int id_num, int nArray[])
 
         break;
 
-    case PID_VEL_CMD:
+    case PID_VEL_CMD: //130
         byDataSize = 2;  // RPM 값은 2바이트로 처리
         byPidDataSize = 8;  // 전체 패킷 크기
         byTempDataSum = 0;
@@ -118,7 +148,10 @@ int PutMdData(BYTE byPID, BYTE byMID, int id_num, int nArray[])
         Com.bySndBuf[6] = nArray[1];  // RPM (high byte)
 
         // 디버깅: RPM 값 출력
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Sending RPM for Motor %d: RPM = %d", id_num, (nArray[0] << 8) + nArray[1]);
+        // 디버깅: RPM 값 출력
+	RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Sending RPM for Motor %d: RPM = %d", id_num, (nArray[1] << 8) + nArray[0]);
+	// 디버깅: RPM 바이트 전송 전 출력
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Sending RPM for Motor %d: 0x%02X 0x%02X", id_num, Com.bySndBuf[5], Com.bySndBuf[6]);
 
         for (i = 0; i < (byPidDataSize - 1); i++) byTempDataSum += Com.bySndBuf[i];
         Com.bySndBuf[byPidDataSize - 1] = ~(byTempDataSum) + 1; // 체크섬 계산
@@ -142,13 +175,14 @@ int MdReceiveProc(void) // Save the identified serial data to defined variable a
     byRcvPID = Com.byRcvBuf[3];
     byRcvDataSize = Com.byRcvBuf[4];
 
-    // 디버깅: 수신된 데이터 출력
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Received data for Motor %d: PID = %d, RPM = %d, Position = %ld",
+    /// 디버깅: 수신된 데이터 출력
+    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Received data for Motor %d: PID = %d, RPM = %d, Position = %d",
                 byRcvID, byRcvPID, Byte2Short(Com.byRcvBuf[5], Com.byRcvBuf[6]), Byte2LInt(Com.byRcvBuf[15], Com.byRcvBuf[16], Com.byRcvBuf[17], Com.byRcvBuf[18]));
+
 
     switch (byRcvPID)
     {
-    case PID_MAIN_DATA:
+    case PID_MAIN_DATA: //193
         // Set RPM and position for Motor1 or Motor2 based on ID
         if (byRcvID == Motor1.ID)
         {
@@ -176,12 +210,12 @@ int AnalyzeReceivedData(BYTE byArray[], BYTE byBufNum) // Analyze the communicat
 
     for (j = 0; j < byBufNum; j++)
     {
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Received byte: %d", byArray[j]);  // 수신된 데이터 로그 추가
+        //RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Received byte: %d", byArray[j]);  // 수신된 데이터 로그 추가
 
         switch (Com.byStep)
         {
         case 0: // Put the transmitting machine ID after checking the data
-            if ((byArray[j] == 0) || (byArray[j] == 183))
+            if ((byArray[j] == 183) || (byArray[j] == 184))
             {
                 Com.byChkSum += byArray[j];
                 Com.byRcvBuf[Com.byPacketNum++] = byArray[j];

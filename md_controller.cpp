@@ -13,6 +13,7 @@ int rpm_ = 0;
 
 void CmdRpmCallBack(const std_msgs::msg::Int32::SharedPtr msg) {
     rpm_ = msg->data;
+    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Received RPM: %d", rpm_);  // rpm_ 값 로그 출력
     SendCmdRpm = ON;
 }
 
@@ -28,7 +29,7 @@ int main(int argc, char *argv[]) {
     auto rpm_sub = node->create_subscription<std_msgs::msg::Int32>("/cmd_rpm", 1000, CmdRpmCallBack);
 
     // 모터 드라이버 설정 (두 개의 모터)
-    node->declare_parameter("MDUI", 0);       
+    node->declare_parameter("MDUI", 184);       
     node->declare_parameter("MDT", 183);        
     node->declare_parameter("Port", "/dev/ttyUSB0");
     node->declare_parameter("Baudrate", 57600);    
@@ -46,9 +47,7 @@ int main(int argc, char *argv[]) {
     node->get_parameter("ID2", Motor2.ID);        // 모터 2 ID
     node->get_parameter("GearRatio", Motor1.GearRatio);
     node->get_parameter("poles", Motor1.poles);
-    
-    // Motor2의 poles와 기어비 추가 설정
-    node->get_parameter("poles", Motor2.poles);
+    node->get_parameter("poles", Motor2.poles); // Motor2의 poles와 기어비 추가 설정
     node->get_parameter("GearRatio", Motor2.GearRatio);
 
     // 초기화 중에 ID가 제대로 설정되었는지 로그를 통해 확인
@@ -56,18 +55,20 @@ int main(int argc, char *argv[]) {
     RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Motor 2 ID: %d", Motor2.ID);
 
     // PPR 값 계산
-    Motor1.PPR = Motor1.poles * 3 * Motor1.GearRatio;           
-    if (Motor1.PPR == 0) {
+    Motor1.PPR = Motor1.poles * 3 * Motor1.GearRatio;
+               
+    /*if (Motor1.PPR == 0) {
         RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Motor 1 PPR is zero! Check poles and GearRatio.");
         Motor1.PPR = 1;  // 안전한 기본값 설정
-    }
+    } */
     Motor1.Tick2RAD = (360.0 / Motor1.PPR) * PI / 180;
-
-    Motor2.PPR = Motor2.poles * 3 * Motor2.GearRatio;           
+    
+    Motor2.PPR = Motor2.poles * 3 * Motor2.GearRatio;   
+    /*
     if (Motor2.PPR == 0) {
         RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Motor 2 PPR is zero! Check poles and GearRatio.");
         Motor2.PPR = 1;  // 안전한 기본값 설정
-    }
+    }*/
     Motor2.Tick2RAD = (360.0 / Motor2.PPR) * PI / 180;
 
     IByte iData;
@@ -163,21 +164,28 @@ int main(int argc, char *argv[]) {
                         byCntCase[byCntComStep] = 0;
 
                         if (SendCmdRpm) {
-                            iData = Short2Byte(rpm_ * Motor1.GearRatio); // 모터 1의 RPM
-                            nArray[0] = iData.byLow;
-                            nArray[1] = iData.byHigh;
-                            PutMdData(PID_VEL_CMD, Com.nIDMDT, Motor1.ID, nArray);
+                            int rpm_with_gear_ratio = rpm_ * Motor1.GearRatio;
 
-                            iData = Short2Byte(rpm_ * Motor2.GearRatio); // 모터 2의 RPM
-                            nArray[0] = iData.byLow;
-                            nArray[1] = iData.byHigh;
-                            PutMdData(PID_VEL_CMD, Com.nIDMDT, Motor2.ID, nArray);
+   			    // RPM 값 및 기어비 적용 후 계산된 값 출력
+    			    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "RPM after GearRatio applied: %d", rpm_with_gear_ratio);
 
-                            SendCmdRpm = OFF;
+ 			   // RPM 값 바이트로 변환
+ 			   IByte iData = Short2Byte(rpm_with_gear_ratio);
+  			   RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Converted RPM to Bytes: 0x%02X 0x%02X", iData.byLow, iData.byHigh);
+
+  			  // RPM 값 전송
+  			  nArray[0] = iData.byLow;
+  			  nArray[1] = iData.byHigh;
+
+  			  // 모터 1, 2에 RPM 값 전송
+  			  PutMdData(PID_VEL_CMD, Com.nIDMDT, Motor1.ID, nArray);
+ 			  PutMdData(PID_VEL_CMD, Com.nIDMDT, Motor2.ID, nArray);
+
+		  	  SendCmdRpm = OFF;
                         } else {
                             nArray[0] = PID_MAIN_DATA;
-                            PutMdData(PID_REQ_PID_DATA, Com.nIDMDT, Motor1.ID, nArray);  // 모터 1의 데이터 요청
-                            PutMdData(PID_REQ_PID_DATA, Com.nIDMDT, Motor2.ID, nArray);  // 모터 2의 데이터 요청
+                            PutMdData(PID_REQ_PID_DATA, Com.nIDMDT, Motor1.ID, nArray);// 모터 1의 데이터 요청
+                            PutMdData(PID_REQ_PID_DATA, Com.nIDMDT, Motor2.ID, nArray);// 모터 2의 데이터 요청
                         }
                     }
                     byCntComStep = 0;
