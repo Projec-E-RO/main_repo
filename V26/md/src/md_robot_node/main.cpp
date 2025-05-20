@@ -2,7 +2,8 @@
 // main.cpp
 // Publisher, Subscrive action added
 #include <geometry_msgs/Twist.h>
-
+#include <nav_msgs/Odometry.h>
+#include <tf/transform_broadcaster.h>
 #include "md_robot_node/global.hpp"
 #include "md_robot_node/main.hpp"
 #include "md_robot_node/com.hpp"
@@ -10,7 +11,7 @@
 #include "md/md_robot_msg2.h"
 #include <ros/ros.h>
 #include <queue>
-
+//#include "md/Pose.h"
 #define MAX_CONNECTION_CHECK_COUNT              10
 
 ros::Publisher md_robot_message1_pub;
@@ -18,6 +19,20 @@ md::md_robot_msg1 md_robot_msg_pid_pnt_main_data;
 
 ros::Publisher md_robot_message2_pub;
 md::md_robot_msg2 md_robot_msg_pid_robot_monitor;
+
+ros::Publisher rightPub;
+ros::Publisher leftPub;
+std_msgs::Int32 right_ticks;
+std_msgs::Int32 left_ticks;
+
+ros::Publisher odom_pub;
+tf::TransformBroadcaster* odom_broadcaster;
+
+double x = 0.0, y = 0.0, th = 0.0;
+int prev_left_ticks = 0;
+int prev_right_ticks = 0;
+ros::Time last_time;
+
 
 ROBOT_PARAMETER_t robotParamData;
 
@@ -44,6 +59,10 @@ extern PID_PNT_MAIN_DATA_t curr_pid_pnt_main_data;
 extern int InitSerialComm(void);
 extern int16_t * RobotSpeedToRPMSpeed(double linear, double angular);
 
+
+void PublishOdomFromTicks();
+void PublishTicks();
+
 // callback function: 1sec period
 void VelCmdRcvTimeoutCallback(const ros:: TimerEvent&)
 {
@@ -57,7 +76,7 @@ void VelCmdRcvTimeoutCallback(const ros:: TimerEvent&)
         if(remote_pc_connection_state == true) {
             velCmdUpdateCount++;
 
-            ROS_INFO("Error.cmd_vel topic --> interface error");
+            // ROS_INFO("Error.cmd_vel topic --> interface error");
             // PC vs Remote PC --> interface error
             remote_pc_connection_state = false;
         }
@@ -66,21 +85,21 @@ void VelCmdRcvTimeoutCallback(const ros:: TimerEvent&)
         old_velCmdRcvCount = velCmdRcvCount;
 
         if(remote_pc_connection_state == false) {
-            ROS_INFO("Ok.cmd_vel topic --> interface OK");
+            // ROS_INFO("Ok.cmd_vel topic --> interface OK");
             remote_pc_connection_state = true;
         }
     }
 
     if(pid_request_cmd_vel_count > 5) {
         if(mdui_mdt_connection_state == true) {
-            ROS_INFO("Error.RS232 or RS485 --> nterface error");
+            // ROS_INFO("Error.RS232 or RS485 --> nterface error");
             // Remote PC vs MDUI or MDT --> nterface error
             mdui_mdt_connection_state = false;
         }
     }
     else if(pid_request_cmd_vel_count == 2) {
         if(mdui_mdt_connection_state == false) {
-            ROS_INFO("Ok.RS232 or RS485 --> Ok");
+            // ROS_INFO("Ok.RS232 or RS485 --> Ok");
             mdui_mdt_connection_state = true;
         }
     }
@@ -242,10 +261,10 @@ void InitMotorParameter(void)               // If using MDUI
 #endif
 
             if(robotParamData.reverse_direction == 0) {
-                cmd_data = 0;
+                cmd_data = 1;
             }
             else {
-                cmd_data = 1;
+                cmd_data = 0;
             }
 
             PutMdData(PID_INV_SIGN_CMD2, robotParamData.nRMID, (const uint8_t *)&cmd_data, 1);
@@ -258,7 +277,7 @@ void InitMotorParameter(void)               // If using MDUI
         {
             uint8_t cmd_data;
 
-#if 0
+#if 1
             ROS_INFO("[SET] PID_USE_POSI(PID NO: %d)", PID_USE_POSI);
 #endif
 
@@ -493,8 +512,15 @@ int main(int argc, char** argv)
 
     reset_pos_flag = false;
     reset_alarm_flag = false;
-
+// Declare left and right motor`s tick pulishers
+    rightPub = nh.advertise<std_msgs::Int32>("right_ticks", 10);
+    leftPub = nh.advertise<std_msgs::Int32>("left_ticks", 10);
     fgInitsetting = INIT_SETTING_STATE_NONE;
+
+    odom_pub = nh.advertise<nav_msgs::Odometry>("odom", 50);
+    odom_broadcaster = new tf::TransformBroadcaster();
+    last_time = ros::Time::now();
+
 
     nh.getParam("md_robot_node/use_MDUI", robotParamData.use_MDUI);
 
@@ -533,10 +559,15 @@ int main(int argc, char** argv)
     nh.getParam("md_robot_node/wheel_radius", robotParamData.wheel_radius);               // m unit
     nh.getParam("md_robot_node/encoder_PPR", robotParamData.encoder_PPR);
     
+    nh.getParam("md_robot_node/encoder_resolution", robotParamData.nEncoderResolution);
+    if (!nh.getParam("md_robot_node/encoder_resolution", robotParamData.nEncoderResolution)) {
+    ROS_WARN("encoder_resolution not set. Using default 1024.");
+    robotParamData.nEncoderResolution = 1024;  // 안전한 기본값
+}
     robotParamData.nDiameter = (int)(robotParamData.wheel_radius * 2.0 * 1000.0);              // nDiameter is (mm) unit
 
     md_robot_message1_pub = nh.advertise<md::md_robot_msg1>("md_robot_message1", 10);
-    //md_robot_message2_pub = nh.advertise<md::md_robot_msg2>("md_robot_message2", 10);
+    md_robot_message2_pub = nh.advertise<md::md_robot_msg2>("md_robot_message2", 10);
 
     ROS_INFO("Serial port             : %s", serial_port.c_str());
     ROS_INFO("Baudrate                : %d bps", robotParamData.nBaudrate);
@@ -565,9 +596,11 @@ int main(int argc, char** argv)
             ROS_INFO(" PPR                    : %d", robotParamData.encoder_PPR);
         }
     }
-
     ROS_INFO("Slow start              : %d", robotParamData.nSlowstart);
-    ROS_INFO("Slow down               : %d", robotParamData.nSlowdown);
+    ROS_INFO("Testing               : %d", robotParamData.nSlowdown);
+
+    PublishOdomFromTicks();
+    cout <<"mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm";
 
     if(InitSerialComm() == -1) {     //communication initialization in com.cpp 
         return 1;
@@ -602,6 +635,8 @@ int main(int argc, char** argv)
     while(ros::ok())
     {
         ReceiveSerialData();
+
+        PublishOdomFromTicks();
 
         InitMotorParameter();
 
@@ -669,6 +704,8 @@ int main(int argc, char** argv)
 
         ReceiveSerialData();
 
+        PublishOdomFromTicks();
+
         RequestRobotStatus();
 
         ros::spinOnce();
@@ -679,6 +716,89 @@ int main(int argc, char** argv)
 void PubRobotRPMMessage(void)               // This is the message used by default
 {
     md_robot_message1_pub.publish(md_robot_msg_pid_pnt_main_data);
+}
+
+void PublishOdomFromTicks() {
+    ros::Time current_time = ros::Time::now();
+    double dt = (current_time - last_time).toSec();
+    if (dt <= 0.0) return;  // 방어 코드
+
+    int curr_left = left_ticks.data;
+    int curr_right = right_ticks.data;
+
+    int delta_left = curr_left - prev_left_ticks;
+    int delta_right = curr_right - prev_right_ticks;
+
+    prev_left_ticks = curr_left;
+    prev_right_ticks = curr_right;
+
+    // 1. 쿼드러쳐 디코딩 반영한 정확한 ticks_per_meter
+    double ticks_per_meter = (robotParamData.encoder_PPR * 4.0 * robotParamData.nGearRatio) 
+                             / (2.0 * M_PI * robotParamData.wheel_radius);
+
+    double dist_left = delta_left / ticks_per_meter;
+    double dist_right = delta_right / ticks_per_meter;
+
+    double dist_avg = (dist_left + dist_right) / 2.0;
+    double delta_th = (dist_right - dist_left) / robotParamData.nWheelLength;
+
+    // 2. Runge-Kutta 방식 위치 누적
+    x += dist_avg * cos(th + delta_th / 2.0);
+    y += dist_avg * sin(th + delta_th / 2.0);
+    th += delta_th;
+
+    //  3. 각도 정규화 [-π, π]
+    while (th > M_PI) th -= 2.0 * M_PI;
+    while (th < -M_PI) th += 2.0 * M_PI;
+
+    // 4. TF transform 전송
+    geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(th);
+    geometry_msgs::TransformStamped odom_trans;
+    odom_trans.header.stamp = current_time;
+    odom_trans.header.frame_id = "odom";
+    odom_trans.child_frame_id = "base_link";
+    odom_trans.transform.translation.x = x;
+    odom_trans.transform.translation.y = y;
+    odom_trans.transform.translation.z = 0.0;
+    odom_trans.transform.rotation = odom_quat;
+    odom_broadcaster->sendTransform(odom_trans);
+
+    // 5. odometry 메시지 발행
+    nav_msgs::Odometry odom;
+    odom.header.stamp = current_time;
+    odom.header.frame_id = "odom";
+    odom.child_frame_id = "base_link";
+    odom.pose.pose.position.x = x;
+    odom.pose.pose.position.y = y;
+    odom.pose.pose.orientation = odom_quat;
+    odom.twist.twist.linear.x = dist_avg / dt;
+    odom.twist.twist.angular.z = delta_th / dt;
+    /*
+    // (선택) 신뢰도 향상을 위한 covariance 설정
+    odom.pose.covariance[0] = 1e-3;
+    odom.pose.covariance[7] = 1e-3;
+    odom.pose.covariance[35] = 1e-3;
+    odom.twist.covariance[0] = 1e-3;
+    odom.twist.covariance[7] = 1e-3;
+    odom.twist.covariance[35] = 1e-3;
+    */
+    odom_pub.publish(odom);
+    last_time = current_time;
+
+    ROS_INFO("ticks/m: %.2f | delta_L: %d, delta_R: %d | dist: %.3f m, theta: %.3f rad", 
+              ticks_per_meter, delta_left, delta_right, dist_avg, th);
+}
+
+
+
+void PublishTicks(void)
+{
+    rightPub.publish(right_ticks);
+    leftPub.publish(left_ticks);
+//if 0
+    //ROS_INFO("\r\n");
+    //ROS_INFO("mtr ticks: %d : %d\n", left_ticks, right_ticks);
+//endif
 }
 
 void PubRobotOdomMessage(void)             // Use only when using MDUI
