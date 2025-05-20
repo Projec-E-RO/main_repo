@@ -4,6 +4,7 @@
 #include "md_robot_node/com.hpp"
 #include "md/md_robot_msg1.h"
 #include "md/md_robot_msg2.h"
+//#include "md/Pose.h"
 
 #define ENABLE_MD_MESSAGE          
 
@@ -18,12 +19,34 @@
 
 #define LEFT           	  0      // Swing direction
 #define RIGHT             1
-
+#define PI 3.1415926535
 extern md::md_robot_msg1 md_robot_msg_pid_pnt_main_data;
 extern md::md_robot_msg2 md_robot_msg_pid_robot_monitor;
 extern PID_ROBOT_MONITOR2_t curr_pid_robot_monitor2;
 extern PID_IO_MONITOR_t curr_pid_io_monitor;
+// Bring meesages from main.cpp to use to tick variable
+extern std_msgs::Int32 right_ticks;
+extern std_msgs::Int32 left_ticks;
 
+
+// RPM --> m/sec
+double * RPMSpeedToRobotSpeed(int16_t rpm_left, int16_t rpm_right)
+{
+    double v_left;
+    double v_right;
+    double temp;
+    static double robot_speed[2];
+
+    temp = (2.0 * PI * robotParamData.wheel_radius) / 60;
+
+    v_left = temp * (double)rpm_left;
+    v_right = temp * (double)rpm_right;
+
+    robot_speed[0] = (v_right + v_left) / 2;
+    robot_speed[1] = (v_right - v_left) / robotParamData.nWheelLength;
+
+    return robot_speed;
+}
 // m/sec --> RPM
 int16_t * RobotSpeedToRPMSpeed(double linear, double angular)
 {
@@ -37,20 +60,20 @@ int16_t * RobotSpeedToRPMSpeed(double linear, double angular)
     wheel_separation = robotParamData.nWheelLength;
     reduction = (double)robotParamData.nGearRatio;
 
-    ROS_INFO("l:%f, a:%f", (double)linear, (double)angular);
+    // ROS_INFO("l:%f, a:%f", (double)linear, (double)angular);
 
-    wheel_velocity_cmd[LEFT]   = linear - (angular * wheel_separation / 2); //역방향
-    wheel_velocity_cmd[RIGHT]  = linear + (angular * wheel_separation / 2); // 정방향
+    wheel_velocity_cmd[LEFT]   = linear - (angular * wheel_separation / 2);
+    wheel_velocity_cmd[RIGHT]  = linear + (angular * wheel_separation / 2);
 
-    ROS_INFO("left:%f, right:%f", (double)wheel_velocity_cmd[LEFT], (double)wheel_velocity_cmd[RIGHT]);
+    // ROS_INFO("left:%f, right:%f", (double)wheel_velocity_cmd[LEFT], (double)wheel_velocity_cmd[RIGHT]);
 
     //***************************************************************************************
-    // Convert the linearvelocity to RPM 선속도에서 rpm으로 변경
+    // Convert the linearvelocity to RPM 
     //***************************************************************************************
     wheel_velocity_cmd[LEFT]  = constrain(wheel_velocity_cmd[LEFT]  * VELOCITY_CONSTANT_VALUE / wheel_radius * reduction, -robotParamData.nMaxRPM, robotParamData.nMaxRPM);
     wheel_velocity_cmd[RIGHT] = constrain(wheel_velocity_cmd[RIGHT] * VELOCITY_CONSTANT_VALUE / wheel_radius * reduction, -robotParamData.nMaxRPM, robotParamData.nMaxRPM);
 
-    ROS_INFO("RPM1 L:%f, R:%f\r\n", (double)wheel_velocity_cmd[LEFT], (double)wheel_velocity_cmd[RIGHT]);
+    // ROS_INFO("RPM1 L:%f, R:%f\r\n", (double)wheel_velocity_cmd[LEFT], (double)wheel_velocity_cmd[RIGHT]);
 
     goal_rpm_spped[0] = (int16_t)(wheel_velocity_cmd[LEFT]);
     goal_rpm_spped[1] = (int16_t)(wheel_velocity_cmd[RIGHT]);
@@ -85,7 +108,7 @@ void MakeMDRobotMessage1(PID_PNT_MAIN_DATA_t *pData)
                 interval_time, md_robot_msg_pid_pnt_main_data.motor1_pos, md_robot_msg_pid_pnt_main_data.motor2_pos, md_robot_msg_pid_pnt_main_data.motor1_rpm, md_robot_msg_pid_pnt_main_data.motor2_rpm, md_robot_msg_pid_pnt_main_data.input_voltage);
 #endif
 }
-//------------------------------------------------------------------------------------
+
 // MDUI
 void MakeMDRobotMessage2(PID_ROBOT_MONITOR_t *pData)
 {
@@ -120,6 +143,26 @@ void MakeMDRobotMessage2(PID_ROBOT_MONITOR_t *pData)
 #ifdef ENABLE_MD_MESSAGE
     ROS_INFO("interval time2: %f, input_voltage: %f\r\n", interval_time, md_robot_msg_pid_robot_monitor.input_voltage);
 #endif    
+}
+
+void CalTicks(PID_PNT_MAIN_DATA_t *pData)
+{
+    int32_t ticks_left;
+    int32_t ticks_right;
+
+    int32_t encoder_minimum = -2147483648;
+    int32_t encoder_maximum = 2147483647;
+    
+    ticks_left = (pData->mtr_pos_id1);  //-> 해당 값 /64 수정하니 됨. 빌드를 꼭 지우자.
+    ticks_right = (pData->mtr_pos_id2); 
+
+    right_ticks.data = ticks_right; 
+    left_ticks.data = ticks_left;
+    
+#if 0
+    ROS_INFO("\r\n");
+    ROS_INFO("mtr ticks: %d : %d", ticks_left, ticks_right);
+#endif
 }
 
 /////////// the end of file
