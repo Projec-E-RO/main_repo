@@ -7,7 +7,7 @@
         <param name = "wheel_length"                value = "0.421"/>  <!-- unit: meter -->
         <param name = "reduction"                   value = "1"/>
         <param name = "reverse_direction"           value = "0"/>       <!-- 0: forward, 1: reverse -->
-        <param name = "maxrpm"                      value = "200"/>    <!-- unit: RPM -->
+        <param name = "maxrpm"                      value = "300"/>    <!-- unit: RPM -->
         <param name = "enable_encoder"              value = "1"/>      <!-- 0: hall sensor, 1: encoder, Use the encoder only when using an in-wheel motor -->
         <param name = "encoder_PPR"                 value = "4096"/>    <!-- if use encoder position, encoder PPR, reference PID 126(PID_PPR) -->
         <param name = "slow_start"                  value = "200"/>     <!-- unit: RPM -->
