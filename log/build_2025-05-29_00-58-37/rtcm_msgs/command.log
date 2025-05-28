@@ -1,0 +1,6 @@
+Invoking command in '/home/kyle/gps_ws/build/rtcm_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kyle/gps_ws/src/eroproj/rtcm_msgs -DCMAKE_INSTALL_PREFIX=/home/kyle/gps_ws/install/rtcm_msgs
+Invoked command in '/home/kyle/gps_ws/build/rtcm_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kyle/gps_ws/src/eroproj/rtcm_msgs -DCMAKE_INSTALL_PREFIX=/home/kyle/gps_ws/install/rtcm_msgs
+Invoking command in '/home/kyle/gps_ws/build/rtcm_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kyle/gps_ws/build/rtcm_msgs -- -j8 -l8
+Invoked command in '/home/kyle/gps_ws/build/rtcm_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kyle/gps_ws/build/rtcm_msgs -- -j8 -l8
+Invoking command in '/home/kyle/gps_ws/build/rtcm_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kyle/gps_ws/build/rtcm_msgs
+Invoked command in '/home/kyle/gps_ws/build/rtcm_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kyle/gps_ws/build/rtcm_msgs

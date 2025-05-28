@@ -1,0 +1,8 @@
+[31mCMake Error at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:230 (message):
+  Could NOT find asio (missing: ASIO_INCLUDE_DIR)
+Call Stack (most recent call first):
+  /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:594 (_FPHSA_FAILURE_MESSAGE)
+  cmake/Findasio.cmake:4 (find_package_handle_standard_args)
+  CMakeLists.txt:16 (find_package)
+
+[0m

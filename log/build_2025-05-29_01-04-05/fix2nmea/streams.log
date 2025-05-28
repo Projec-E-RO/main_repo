@@ -1,0 +1,52 @@
+[0.033s] Invoking command in '/home/kyle/gps_ws/build/fix2nmea': AMENT_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/kyle/gps_ws/install/ublox_msgs/lib:/home/kyle/gps_ws/install/rtcm_msgs/lib:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 PYTHONPATH=/home/kyle/gps_ws/install/ublox_msgs/local/lib/python3.10/dist-packages:/home/kyle/gps_ws/install/rtcm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/kyle/gps_ws/src/eroproj/fix2nmea -DCMAKE_INSTALL_PREFIX=/home/kyle/gps_ws/install/fix2nmea
+[0.056s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.307s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[0.356s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.359s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.369s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.384s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.414s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.492s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.495s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.755s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.835s] -- Found nmea_msgs: 2.0.0 (/opt/ros/humble/share/nmea_msgs/cmake)
+[0.871s] -- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.919s] -- Found ublox_msgs: 2.3.0 (/home/kyle/gps_ws/install/ublox_msgs/share/ublox_msgs/cmake)
+[0.951s] -- Found rtcm_msgs: 1.1.6 (/home/kyle/gps_ws/install/rtcm_msgs/share/rtcm_msgs/cmake)
+[0.980s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.191s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.191s] -- Configured cppcheck include dirs: 
+[1.192s] -- Configured cppcheck exclude dirs and/or files: 
+[1.200s] -- Added test 'lint_cmake' to check CMake code style
+[1.204s] -- Added test 'uncrustify' to check C / C++ code style
+[1.204s] -- Configured uncrustify additional arguments: 
+[1.215s] -- Added test 'xmllint' to check XML markup files
+[1.219s] -- Configuring done
+[1.245s] -- Generating done
+[1.254s] -- Build files have been written to: /home/kyle/gps_ws/build/fix2nmea
+[1.284s] Invoked command in '/home/kyle/gps_ws/build/fix2nmea' returned '0': AMENT_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/kyle/gps_ws/install/ublox_msgs/lib:/home/kyle/gps_ws/install/rtcm_msgs/lib:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 PYTHONPATH=/home/kyle/gps_ws/install/ublox_msgs/local/lib/python3.10/dist-packages:/home/kyle/gps_ws/install/rtcm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/kyle/gps_ws/src/eroproj/fix2nmea -DCMAKE_INSTALL_PREFIX=/home/kyle/gps_ws/install/fix2nmea
+[1.285s] Invoking command in '/home/kyle/gps_ws/build/fix2nmea': AMENT_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/kyle/gps_ws/install/ublox_msgs/lib:/home/kyle/gps_ws/install/rtcm_msgs/lib:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 PYTHONPATH=/home/kyle/gps_ws/install/ublox_msgs/local/lib/python3.10/dist-packages:/home/kyle/gps_ws/install/rtcm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/kyle/gps_ws/build/fix2nmea -- -j8 -l8
+[1.541s] [ 50%] [32mBuilding CXX object CMakeFiles/fix2nmea.dir/src/fix2nmea.cpp.o[0m
+[33.845s] [100%] [32m[1mLinking CXX executable fix2nmea[0m
+[35.801s] [100%] Built target fix2nmea
+[35.843s] Invoked command in '/home/kyle/gps_ws/build/fix2nmea' returned '0': AMENT_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/kyle/gps_ws/install/ublox_msgs/lib:/home/kyle/gps_ws/install/rtcm_msgs/lib:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 PYTHONPATH=/home/kyle/gps_ws/install/ublox_msgs/local/lib/python3.10/dist-packages:/home/kyle/gps_ws/install/rtcm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/kyle/gps_ws/build/fix2nmea -- -j8 -l8
+[35.844s] Invoking command in '/home/kyle/gps_ws/build/fix2nmea': AMENT_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/kyle/gps_ws/install/ublox_msgs/lib:/home/kyle/gps_ws/install/rtcm_msgs/lib:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 PYTHONPATH=/home/kyle/gps_ws/install/ublox_msgs/local/lib/python3.10/dist-packages:/home/kyle/gps_ws/install/rtcm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/kyle/gps_ws/build/fix2nmea
+[35.862s] -- Install configuration: ""
+[35.863s] -- Installing: /home/kyle/gps_ws/install/fix2nmea/lib/fix2nmea/fix2nmea
+[35.873s] -- Set runtime path of "/home/kyle/gps_ws/install/fix2nmea/lib/fix2nmea/fix2nmea" to ""
+[35.875s] -- Installing: /home/kyle/gps_ws/install/fix2nmea/share/ament_index/resource_index/package_run_dependencies/fix2nmea
+[35.876s] -- Installing: /home/kyle/gps_ws/install/fix2nmea/share/ament_index/resource_index/parent_prefix_path/fix2nmea
+[35.876s] -- Installing: /home/kyle/gps_ws/install/fix2nmea/share/fix2nmea/environment/ament_prefix_path.sh
+[35.877s] -- Installing: /home/kyle/gps_ws/install/fix2nmea/share/fix2nmea/environment/ament_prefix_path.dsv
+[35.878s] -- Installing: /home/kyle/gps_ws/install/fix2nmea/share/fix2nmea/environment/path.sh
+[35.879s] -- Installing: /home/kyle/gps_ws/install/fix2nmea/share/fix2nmea/environment/path.dsv
+[35.879s] -- Installing: /home/kyle/gps_ws/install/fix2nmea/share/fix2nmea/local_setup.bash
+[35.880s] -- Installing: /home/kyle/gps_ws/install/fix2nmea/share/fix2nmea/local_setup.sh
+[35.881s] -- Installing: /home/kyle/gps_ws/install/fix2nmea/share/fix2nmea/local_setup.zsh
+[35.881s] -- Installing: /home/kyle/gps_ws/install/fix2nmea/share/fix2nmea/local_setup.dsv
+[35.882s] -- Installing: /home/kyle/gps_ws/install/fix2nmea/share/fix2nmea/package.dsv
+[35.883s] -- Installing: /home/kyle/gps_ws/install/fix2nmea/share/ament_index/resource_index/packages/fix2nmea
+[35.884s] -- Installing: /home/kyle/gps_ws/install/fix2nmea/share/fix2nmea/cmake/fix2nmeaConfig.cmake
+[35.884s] -- Installing: /home/kyle/gps_ws/install/fix2nmea/share/fix2nmea/cmake/fix2nmeaConfig-version.cmake
+[35.885s] -- Installing: /home/kyle/gps_ws/install/fix2nmea/share/fix2nmea/package.xml
+[35.907s] Invoked command in '/home/kyle/gps_ws/build/fix2nmea' returned '0': AMENT_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/kyle/gps_ws/install/ublox_msgs/lib:/home/kyle/gps_ws/install/rtcm_msgs/lib:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 PYTHONPATH=/home/kyle/gps_ws/install/ublox_msgs/local/lib/python3.10/dist-packages:/home/kyle/gps_ws/install/rtcm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/kyle/gps_ws/build/fix2nmea

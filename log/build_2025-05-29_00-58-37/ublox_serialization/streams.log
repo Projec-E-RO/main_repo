@@ -1,0 +1,46 @@
+[0.033s] Invoking command in '/home/kyle/gps_ws/build/ublox_serialization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kyle/gps_ws/src/eroproj/ublox_serialization -DCMAKE_INSTALL_PREFIX=/home/kyle/gps_ws/install/ublox_serialization
+[0.219s] -- The C compiler identification is GNU 11.4.0
+[0.364s] -- The CXX compiler identification is GNU 11.4.0
+[0.380s] -- Detecting C compiler ABI info
+[0.504s] -- Detecting C compiler ABI info - done
+[0.519s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.520s] -- Detecting C compile features
+[0.521s] -- Detecting C compile features - done
+[0.529s] -- Detecting CXX compiler ABI info
+[0.676s] -- Detecting CXX compiler ABI info - done
+[0.686s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.687s] -- Detecting CXX compile features
+[0.687s] -- Detecting CXX compile features - done
+[0.694s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.982s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.285s] -- Configuring done
+[1.290s] -- Generating done
+[1.293s] -- Build files have been written to: /home/kyle/gps_ws/build/ublox_serialization
+[1.303s] Invoked command in '/home/kyle/gps_ws/build/ublox_serialization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kyle/gps_ws/src/eroproj/ublox_serialization -DCMAKE_INSTALL_PREFIX=/home/kyle/gps_ws/install/ublox_serialization
+[1.307s] Invoking command in '/home/kyle/gps_ws/build/ublox_serialization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kyle/gps_ws/build/ublox_serialization -- -j8 -l8
+[1.375s] Invoked command in '/home/kyle/gps_ws/build/ublox_serialization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kyle/gps_ws/build/ublox_serialization -- -j8 -l8
+[1.394s] Invoking command in '/home/kyle/gps_ws/build/ublox_serialization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kyle/gps_ws/build/ublox_serialization
+[1.409s] -- Install configuration: ""
+[1.409s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/include/ublox_serialization
+[1.410s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/include/ublox_serialization/ublox_serialization
+[1.410s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/include/ublox_serialization/ublox_serialization/checksum.hpp
+[1.411s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/include/ublox_serialization/ublox_serialization/serialization.hpp
+[1.411s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ament_index/resource_index/package_run_dependencies/ublox_serialization
+[1.411s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ament_index/resource_index/parent_prefix_path/ublox_serialization
+[1.412s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ublox_serialization/environment/ament_prefix_path.sh
+[1.412s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ublox_serialization/environment/ament_prefix_path.dsv
+[1.413s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ublox_serialization/environment/path.sh
+[1.413s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ublox_serialization/environment/path.dsv
+[1.413s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ublox_serialization/local_setup.bash
+[1.413s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ublox_serialization/local_setup.sh
+[1.414s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ublox_serialization/local_setup.zsh
+[1.414s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ublox_serialization/local_setup.dsv
+[1.415s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ublox_serialization/package.dsv
+[1.415s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ament_index/resource_index/packages/ublox_serialization
+[1.415s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ublox_serialization/cmake/export_ublox_serializationExport.cmake
+[1.415s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ublox_serialization/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.415s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ublox_serialization/cmake/ament_cmake_export_targets-extras.cmake
+[1.415s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ublox_serialization/cmake/ublox_serializationConfig.cmake
+[1.416s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ublox_serialization/cmake/ublox_serializationConfig-version.cmake
+[1.416s] -- Installing: /home/kyle/gps_ws/install/ublox_serialization/share/ublox_serialization/package.xml
+[1.421s] Invoked command in '/home/kyle/gps_ws/build/ublox_serialization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kyle/gps_ws/build/ublox_serialization

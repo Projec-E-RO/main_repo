@@ -1,0 +1,29 @@
+[0.021s] Invoking command in '/home/kyle/gps_ws/build/ublox_gps': AMENT_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/kyle/gps_ws/install/ublox_msgs/lib:/home/kyle/gps_ws/install/rtcm_msgs/lib:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 PYTHONPATH=/home/kyle/gps_ws/install/ublox_msgs/local/lib/python3.10/dist-packages:/home/kyle/gps_ws/install/rtcm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/kyle/gps_ws/src/eroproj/ublox_gps -DCMAKE_INSTALL_PREFIX=/home/kyle/gps_ws/install/ublox_gps
+[0.041s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.289s] -- Found asio: /usr/include  
+[0.293s] -- Found diagnostic_msgs: 4.8.0 (/opt/ros/humble/share/diagnostic_msgs/cmake)
+[0.367s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.376s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.391s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.411s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.439s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.507s] -- Found diagnostic_updater: 4.0.4 (/opt/ros/humble/share/diagnostic_updater/cmake)
+[0.581s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.585s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.730s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.787s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.861s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.877s] -- Looking for pthread.h
+[1.013s] -- Looking for pthread.h - found
+[1.013s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.153s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.157s] -- Found Threads: TRUE  
+[1.270s] -- Found geometry_msgs: 4.8.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.297s] -- Found rclcpp_components: 16.0.12 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.363s] -- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.394s] -- Found tf2: 0.25.12 (/opt/ros/humble/share/tf2/cmake)
+[1.400s] -- Found ublox_msgs: 2.3.0 (/home/kyle/gps_ws/install/ublox_msgs/share/ublox_msgs/cmake)
+[1.428s] -- Found rtcm_msgs: 1.1.6 (/home/kyle/gps_ws/install/rtcm_msgs/share/rtcm_msgs/cmake)
+[1.572s] -- Configuring done
+[1.678s] -- Generating done
+[1.694s] -- Build files have been written to: /home/kyle/gps_ws/build/ublox_gps

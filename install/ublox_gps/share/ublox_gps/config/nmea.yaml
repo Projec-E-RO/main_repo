@@ -1,0 +1,25 @@
+ublox_gps_node:
+  ros__parameters:
+    nmea.set: true
+    nmea.version: 65
+    nmea.num_sv: 8
+    nmea.sv_numbering: 1
+    nmea.compat: true
+    nmea.consider: true
+    nmea.limit82: true
+    nmea.high_prec: true
+    nmea.filter_pos: true           # 점(.)으로 구분된 키
+    nmea.filter_msk_pos: true
+    nmea.filter_time: true
+    nmea.filter_date: true
+    nmea.filter_gps_only: true
+    nmea.filter_track: true
+    nmea.gnssToFilter_gps: false    # 중첩 구조를 평평하게
+    nmea.gnssToFilter_sbas: true
+    nmea.gnssToFilter_qzss: true
+    nmea.gnssToFilter_glonass: false
+    nmea.gnssToFilter_beidou: true
+    nmea.main_talker_id: 1
+    nmea.gsv_talker_id: 1
+    nmea.bds_talker_id: [0, 0]
+

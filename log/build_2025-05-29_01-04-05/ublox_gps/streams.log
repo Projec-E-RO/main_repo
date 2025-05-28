@@ -1,0 +1,96 @@
+[0.027s] Invoking command in '/home/kyle/gps_ws/build/ublox_gps': AMENT_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/kyle/gps_ws/install/ublox_msgs/lib:/home/kyle/gps_ws/install/rtcm_msgs/lib:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 PYTHONPATH=/home/kyle/gps_ws/install/ublox_msgs/local/lib/python3.10/dist-packages:/home/kyle/gps_ws/install/rtcm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/kyle/gps_ws/build/ublox_gps -- -j8 -l8
+[0.128s] [  9%] [32mBuilding CXX object CMakeFiles/ublox_gps.dir/src/adr_udr_product.cpp.o[0m
+[0.132s] [  4%] [32mBuilding CXX object CMakeFiles/ublox_gps.dir/src/gps.cpp.o[0m
+[0.133s] [ 13%] [32mBuilding C object CMakeFiles/ublox_gps.dir/src/mkgmtime.c.o[0m
+[0.134s] [ 18%] [32mBuilding CXX object CMakeFiles/ublox_gps.dir/src/hpg_rov_product.cpp.o[0m
+[0.134s] [ 22%] [32mBuilding CXX object CMakeFiles/ublox_gps.dir/src/hp_pos_rec_product.cpp.o[0m
+[0.137s] [ 27%] [32mBuilding CXX object CMakeFiles/ublox_gps.dir/src/gnss.cpp.o[0m
+[0.138s] [ 31%] [32mBuilding CXX object CMakeFiles/ublox_gps.dir/src/hpg_ref_product.cpp.o[0m
+[0.144s] [ 36%] [32mBuilding CXX object CMakeFiles/ublox_gps.dir/src/node.cpp.o[0m
+[0.284s] [ 40%] [32mBuilding CXX object CMakeFiles/ublox_gps.dir/src/raw_data_pa.cpp.o[0m
+[0.947s] [ 45%] [32mBuilding CXX object CMakeFiles/ublox_gps.dir/src/raw_data_product.cpp.o[0m
+[21.889s] [ 50%] [32mBuilding CXX object CMakeFiles/ublox_gps.dir/src/tim_product.cpp.o[0m
+[23.320s] [ 54%] [32mBuilding CXX object CMakeFiles/ublox_gps.dir/src/ublox_firmware.cpp.o[0m
+[23.351s] [ 59%] [32mBuilding CXX object CMakeFiles/ublox_gps.dir/src/ublox_firmware6.cpp.o[0m
+[23.626s] [ 63%] [32mBuilding CXX object CMakeFiles/ublox_gps.dir/src/ublox_firmware7.cpp.o[0m
+[28.397s] [ 68%] [32mBuilding CXX object CMakeFiles/ublox_gps.dir/src/ublox_firmware8.cpp.o[0m
+[28.693s] [ 72%] [32mBuilding CXX object CMakeFiles/ublox_gps.dir/src/ublox_firmware9.cpp.o[0m
+[54.437s] [ 77%] [32m[1mLinking CXX shared library libublox_gps.so[0m
+[62.700s] [ 77%] Built target ublox_gps
+[62.744s] [ 86%] [32mBuilding CXX object CMakeFiles/ublox_logger.dir/src/logger_node_pa.cpp.o[0m
+[62.744s] [ 86%] [32mBuilding CXX object CMakeFiles/ublox_gps_node.dir/src/node_main.cpp.o[0m
+[62.744s] [ 90%] [32mBuilding CXX object CMakeFiles/ublox_logger.dir/src/raw_data_pa.cpp.o[0m
+[73.877s] [ 95%] [32m[1mLinking CXX executable ublox_gps_node[0m
+[77.465s] [ 95%] Built target ublox_gps_node
+[78.876s] [100%] [32m[1mLinking CXX executable ublox_logger[0m
+[79.855s] [100%] Built target ublox_logger
+[79.880s] Invoked command in '/home/kyle/gps_ws/build/ublox_gps' returned '0': AMENT_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/kyle/gps_ws/install/ublox_msgs/lib:/home/kyle/gps_ws/install/rtcm_msgs/lib:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 PYTHONPATH=/home/kyle/gps_ws/install/ublox_msgs/local/lib/python3.10/dist-packages:/home/kyle/gps_ws/install/rtcm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/kyle/gps_ws/build/ublox_gps -- -j8 -l8
+[79.885s] Invoking command in '/home/kyle/gps_ws/build/ublox_gps': AMENT_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/kyle/gps_ws/install/ublox_msgs/lib:/home/kyle/gps_ws/install/rtcm_msgs/lib:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 PYTHONPATH=/home/kyle/gps_ws/install/ublox_msgs/local/lib/python3.10/dist-packages:/home/kyle/gps_ws/install/rtcm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/kyle/gps_ws/build/ublox_gps
+[79.901s] -- Install configuration: ""
+[79.902s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/lib/libublox_gps.so
+[79.959s] -- Set runtime path of "/home/kyle/gps_ws/install/ublox_gps/lib/libublox_gps.so" to ""
+[79.959s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/lib/ublox_gps/ublox_gps_node
+[79.960s] -- Set runtime path of "/home/kyle/gps_ws/install/ublox_gps/lib/ublox_gps/ublox_gps_node" to ""
+[79.960s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/lib/ublox_gps/ublox_logger
+[79.966s] -- Set runtime path of "/home/kyle/gps_ws/install/ublox_gps/lib/ublox_gps/ublox_logger" to ""
+[79.967s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps
+[79.967s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps
+[79.967s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/ublox_firmware.hpp
+[79.967s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/hpg_ref_product.hpp
+[79.967s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/hpg_rov_product.hpp
+[79.967s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/ublox_firmware7plus.hpp
+[79.967s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/mkgmtime.h
+[79.968s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/adr_udr_product.hpp
+[79.968s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/callback.hpp
+[79.968s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/gps.hpp
+[79.968s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/raw_data_product.hpp
+[79.968s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/ublox_topic_diagnostic.hpp
+[79.968s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/hp_pos_rec_product.hpp
+[79.968s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/fts_product.hpp
+[79.968s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/ublox_firmware9.hpp
+[79.969s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/rtcm.hpp
+[79.969s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/worker.hpp
+[79.969s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/utils.hpp
+[79.969s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/fix_diagnostic.hpp
+[79.969s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/raw_data_pa.hpp
+[79.970s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/async_worker.hpp
+[79.970s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/node.hpp
+[79.970s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/component_interface.hpp
+[79.971s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/ublox_firmware6.hpp
+[79.971s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/tim_product.hpp
+[79.971s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/ublox_firmware8.hpp
+[79.972s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/gnss.hpp
+[79.972s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/include/ublox_gps/ublox_gps/ublox_firmware7.hpp
+[79.973s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/launch
+[79.973s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/launch/ublox_gps_node-launch.py
+[79.973s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/launch/ublox_gps_node-composed-launch.py
+[79.974s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/config
+[79.974s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/config/c94_m8t_base.yaml
+[79.974s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/config/neo_m8u_rover.yaml
+[79.975s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/config/nmea.yaml
+[79.975s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/config/zed_f9p.yaml
+[79.975s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/config/c94_m8p_rover.yaml
+[79.975s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/config/c94_m8t_rover.yaml
+[79.976s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/config/c94_m8p_base.yaml
+[79.976s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/config/c94_m8p_rover (copy).yaml
+[79.976s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ament_index/resource_index/package_run_dependencies/ublox_gps
+[79.976s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ament_index/resource_index/parent_prefix_path/ublox_gps
+[79.977s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/environment/ament_prefix_path.sh
+[79.977s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/environment/ament_prefix_path.dsv
+[79.977s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/environment/path.sh
+[79.977s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/environment/path.dsv
+[79.978s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/local_setup.bash
+[79.978s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/local_setup.sh
+[79.978s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/local_setup.zsh
+[79.978s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/local_setup.dsv
+[79.978s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/package.dsv
+[79.979s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ament_index/resource_index/packages/ublox_gps
+[79.979s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ament_index/resource_index/rclcpp_components/ublox_gps
+[79.979s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/cmake/export_ublox_gpsExport.cmake
+[79.979s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/cmake/export_ublox_gpsExport-noconfig.cmake
+[79.980s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/cmake/ament_cmake_export_include_directories-extras.cmake
+[79.981s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/cmake/ament_cmake_export_targets-extras.cmake
+[79.982s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/cmake/ublox_gpsConfig.cmake
+[79.983s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/cmake/ublox_gpsConfig-version.cmake
+[79.983s] -- Installing: /home/kyle/gps_ws/install/ublox_gps/share/ublox_gps/package.xml
+[79.984s] Invoked command in '/home/kyle/gps_ws/build/ublox_gps' returned '0': AMENT_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kyle/gps_ws/install/ublox_msgs:/home/kyle/gps_ws/install/ublox_serialization:/home/kyle/gps_ws/install/rtcm_msgs:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/kyle/gps_ws/install/ublox_msgs/lib:/home/kyle/gps_ws/install/rtcm_msgs/lib:/home/kyle/ros-humble-ros1-bridge/install/ros1_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 PYTHONPATH=/home/kyle/gps_ws/install/ublox_msgs/local/lib/python3.10/dist-packages:/home/kyle/gps_ws/install/rtcm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/kyle/gps_ws/build/ublox_gps
