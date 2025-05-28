@@ -1,0 +1,6 @@
+{
+  "package_name": "test_package",
+  "non_idl_tuples": [
+    "/home/messi/my_ws/src/test_package:msg/RobotPose.msg"
+  ]
+}

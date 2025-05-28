@@ -1,0 +1,26 @@
+## 5층
+set_position()
+current_floor = 5
+goal_floor = 0
+
+## 6층으로 가라 명령
+current_floor = 5
+goal_floor = 6
+-> goal_button : {current_floor < goal_floor ? button_up : button_down, button_goal}
+set_position()
+
+## 6층으로 도착 확인(마커)
+current_floor = 6
+goal_floor = 6
+
+## 1층으로 가라 명령
+current_floor = 6
+goal_floor = 1
+-> goal_button : {current_floor < goal_floor ? button_up : button_down, button_goal}
+set_position()
+
+## 6층으로 가라 명령
+current_floor = 1
+goal_floor = 6
+-> goal_button : {current_floor < goal_floor ? button_up : button_down, button_goal}
+set_position()

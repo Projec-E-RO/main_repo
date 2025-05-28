@@ -1,0 +1,6 @@
+Invoking command in '/home/messi/my_ws/build/test_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/messi/my_ws/src/test_package -DCMAKE_INSTALL_PREFIX=/home/messi/my_ws/install/test_package
+Invoked command in '/home/messi/my_ws/build/test_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/messi/my_ws/src/test_package -DCMAKE_INSTALL_PREFIX=/home/messi/my_ws/install/test_package
+Invoking command in '/home/messi/my_ws/build/test_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/messi/my_ws/build/test_package -- -j12 -l12
+Invoked command in '/home/messi/my_ws/build/test_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/messi/my_ws/build/test_package -- -j12 -l12
+Invoking command in '/home/messi/my_ws/build/test_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/messi/my_ws/build/test_package
+Invoked command in '/home/messi/my_ws/build/test_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/messi/my_ws/build/test_package
