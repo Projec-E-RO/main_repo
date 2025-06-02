@@ -1,2 +1,8 @@
+msg/ManipulatorPose.idl
+msg/ManipulatorPose.msg
 msg/RobotPose.idl
 msg/RobotPose.msg
+srv/IsSuccess.idl
+srv/IsSuccess.srv
+srv/IsSuccess_Request.msg
+srv/IsSuccess_Response.msg

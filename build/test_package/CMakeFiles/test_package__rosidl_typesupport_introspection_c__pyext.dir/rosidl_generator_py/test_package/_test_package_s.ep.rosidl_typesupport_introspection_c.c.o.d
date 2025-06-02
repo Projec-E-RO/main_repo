@@ -206,4 +206,10 @@ CMakeFiles/test_package__rosidl_typesupport_introspection_c__pyext.dir/rosidl_ge
  /home/messi/my_ws/build/test_package/rosidl_generator_c/test_package/msg/detail/robot_pose__struct.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
- /home/messi/my_ws/build/test_package/rosidl_generator_c/test_package/msg/detail/robot_pose__functions.h
+ /home/messi/my_ws/build/test_package/rosidl_generator_c/test_package/msg/detail/robot_pose__functions.h \
+ /home/messi/my_ws/build/test_package/rosidl_generator_c/test_package/msg/detail/manipulator_pose__type_support.h \
+ /home/messi/my_ws/build/test_package/rosidl_generator_c/test_package/msg/detail/manipulator_pose__struct.h \
+ /home/messi/my_ws/build/test_package/rosidl_generator_c/test_package/msg/detail/manipulator_pose__functions.h \
+ /home/messi/my_ws/build/test_package/rosidl_generator_c/test_package/srv/detail/is_success__type_support.h \
+ /home/messi/my_ws/build/test_package/rosidl_generator_c/test_package/srv/detail/is_success__struct.h \
+ /home/messi/my_ws/build/test_package/rosidl_generator_c/test_package/srv/detail/is_success__functions.h

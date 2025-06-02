@@ -21,16 +21,32 @@ namespace msg
 namespace builder
 {
 
+class Init_RobotPose_gripper_open
+{
+public:
+  explicit Init_RobotPose_gripper_open(::test_package::msg::RobotPose & msg)
+  : msg_(msg)
+  {}
+  ::test_package::msg::RobotPose gripper_open(::test_package::msg::RobotPose::_gripper_open_type arg)
+  {
+    msg_.gripper_open = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::test_package::msg::RobotPose msg_;
+};
+
 class Init_RobotPose_label
 {
 public:
   explicit Init_RobotPose_label(::test_package::msg::RobotPose & msg)
   : msg_(msg)
   {}
-  ::test_package::msg::RobotPose label(::test_package::msg::RobotPose::_label_type arg)
+  Init_RobotPose_gripper_open label(::test_package::msg::RobotPose::_label_type arg)
   {
     msg_.label = std::move(arg);
-    return std::move(msg_);
+    return Init_RobotPose_gripper_open(msg_);
   }
 
 private:

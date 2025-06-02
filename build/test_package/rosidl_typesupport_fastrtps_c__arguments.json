@@ -3,7 +3,9 @@
   "output_dir": "/home/messi/my_ws/build/test_package/rosidl_typesupport_fastrtps_c/test_package",
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource",
   "idl_tuples": [
-    "/home/messi/my_ws/build/test_package/rosidl_adapter/test_package:msg/RobotPose.idl"
+    "/home/messi/my_ws/build/test_package/rosidl_adapter/test_package:msg/RobotPose.idl",
+    "/home/messi/my_ws/build/test_package/rosidl_adapter/test_package:msg/ManipulatorPose.idl",
+    "/home/messi/my_ws/build/test_package/rosidl_adapter/test_package:srv/IsSuccess.idl"
   ],
   "ros_interface_dependencies": [
     "builtin_interfaces:/opt/ros/humble/share/builtin_interfaces/msg/Duration.idl",
@@ -19,6 +21,8 @@
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource/srv__rosidl_typesupport_fastrtps_c.h.em",
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource/srv__type_support_c.cpp.em",
     "/home/messi/my_ws/build/test_package/rosidl_adapter/test_package/msg/RobotPose.idl",
+    "/home/messi/my_ws/build/test_package/rosidl_adapter/test_package/msg/ManipulatorPose.idl",
+    "/home/messi/my_ws/build/test_package/rosidl_adapter/test_package/srv/IsSuccess.idl",
     "/opt/ros/humble/share/builtin_interfaces/msg/Duration.idl",
     "/opt/ros/humble/share/builtin_interfaces/msg/Time.idl"
   ]

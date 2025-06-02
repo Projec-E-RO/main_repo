@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from test_package/srv/IsSuccess.srv
+// generated code does not contain a copyright notice
+
+
+module test_package {
+  module srv {
+    struct IsSuccess_Request {
+      string button_type;
+    };
+    struct IsSuccess_Response {
+      boolean success;
+    };
+  };
+};

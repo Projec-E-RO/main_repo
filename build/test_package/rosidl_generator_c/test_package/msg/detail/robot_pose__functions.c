@@ -29,6 +29,7 @@ test_package__msg__RobotPose__init(test_package__msg__RobotPose * msg)
     test_package__msg__RobotPose__fini(msg);
     return false;
   }
+  // gripper_open
   return true;
 }
 
@@ -43,6 +44,7 @@ test_package__msg__RobotPose__fini(test_package__msg__RobotPose * msg)
   // z
   // label
   rosidl_runtime_c__String__fini(&msg->label);
+  // gripper_open
 }
 
 bool
@@ -69,6 +71,10 @@ test_package__msg__RobotPose__are_equal(const test_package__msg__RobotPose * lhs
   {
     return false;
   }
+  // gripper_open
+  if (lhs->gripper_open != rhs->gripper_open) {
+    return false;
+  }
   return true;
 }
 
@@ -92,6 +98,8 @@ test_package__msg__RobotPose__copy(
   {
     return false;
   }
+  // gripper_open
+  output->gripper_open = input->gripper_open;
   return true;
 }
 

@@ -28,6 +28,7 @@ typedef struct test_package__msg__RobotPose
   float y;
   float z;
   rosidl_runtime_c__String label;
+  bool gripper_open;
 } test_package__msg__RobotPose;
 
 // Struct for a sequence of test_package__msg__RobotPose.

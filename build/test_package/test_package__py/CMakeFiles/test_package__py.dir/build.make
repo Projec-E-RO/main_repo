@@ -70,8 +70,13 @@ test_package__py/CMakeFiles/test_package__py: rosidl_generator_py/test_package/_
 test_package__py/CMakeFiles/test_package__py: rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_introspection_c.c
 test_package__py/CMakeFiles/test_package__py: rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_c.c
 test_package__py/CMakeFiles/test_package__py: rosidl_generator_py/test_package/msg/_robot_pose.py
+test_package__py/CMakeFiles/test_package__py: rosidl_generator_py/test_package/msg/_manipulator_pose.py
+test_package__py/CMakeFiles/test_package__py: rosidl_generator_py/test_package/srv/_is_success.py
 test_package__py/CMakeFiles/test_package__py: rosidl_generator_py/test_package/msg/__init__.py
+test_package__py/CMakeFiles/test_package__py: rosidl_generator_py/test_package/srv/__init__.py
 test_package__py/CMakeFiles/test_package__py: rosidl_generator_py/test_package/msg/_robot_pose_s.c
+test_package__py/CMakeFiles/test_package__py: rosidl_generator_py/test_package/msg/_manipulator_pose_s.c
+test_package__py/CMakeFiles/test_package__py: rosidl_generator_py/test_package/srv/_is_success_s.c
 
 rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -87,6 +92,8 @@ rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_
 rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/test_package/msg/RobotPose.idl
+rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/test_package/msg/ManipulatorPose.idl
+rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/test_package/srv/IsSuccess.idl
 rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/messi/my_ws/build/test_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
@@ -101,18 +108,38 @@ rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_c.c: rosi
 rosidl_generator_py/test_package/msg/_robot_pose.py: rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/test_package/msg/_robot_pose.py
 
+rosidl_generator_py/test_package/msg/_manipulator_pose.py: rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/test_package/msg/_manipulator_pose.py
+
+rosidl_generator_py/test_package/srv/_is_success.py: rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/test_package/srv/_is_success.py
+
 rosidl_generator_py/test_package/msg/__init__.py: rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/test_package/msg/__init__.py
 
+rosidl_generator_py/test_package/srv/__init__.py: rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/test_package/srv/__init__.py
+
 rosidl_generator_py/test_package/msg/_robot_pose_s.c: rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/test_package/msg/_robot_pose_s.c
+
+rosidl_generator_py/test_package/msg/_manipulator_pose_s.c: rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/test_package/msg/_manipulator_pose_s.c
+
+rosidl_generator_py/test_package/srv/_is_success_s.c: rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/test_package/srv/_is_success_s.c
 
 test_package__py: rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_c.c
 test_package__py: rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c
 test_package__py: rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_introspection_c.c
 test_package__py: rosidl_generator_py/test_package/msg/__init__.py
+test_package__py: rosidl_generator_py/test_package/msg/_manipulator_pose.py
+test_package__py: rosidl_generator_py/test_package/msg/_manipulator_pose_s.c
 test_package__py: rosidl_generator_py/test_package/msg/_robot_pose.py
 test_package__py: rosidl_generator_py/test_package/msg/_robot_pose_s.c
+test_package__py: rosidl_generator_py/test_package/srv/__init__.py
+test_package__py: rosidl_generator_py/test_package/srv/_is_success.py
+test_package__py: rosidl_generator_py/test_package/srv/_is_success_s.c
 test_package__py: test_package__py/CMakeFiles/test_package__py
 test_package__py: test_package__py/CMakeFiles/test_package__py.dir/build.make
 .PHONY : test_package__py

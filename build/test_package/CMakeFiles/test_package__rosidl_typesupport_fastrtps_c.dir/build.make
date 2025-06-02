@@ -78,6 +78,8 @@ rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__rosidl_typesup
 rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource/srv__rosidl_typesupport_fastrtps_c.h.em
 rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource/srv__type_support_c.cpp.em
 rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/test_package/msg/RobotPose.idl
+rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/test_package/msg/ManipulatorPose.idl
+rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/test_package/srv/IsSuccess.idl
 rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/messi/my_ws/build/test_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C type support for eProsima Fast-RTPS"
@@ -85,6 +87,18 @@ rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__rosidl_typesup
 
 rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__type_support_c.cpp: rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__type_support_c.cpp
+
+rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp: rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp
+
+rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp: rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp
 
 CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__type_support_c.cpp.o: CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__type_support_c.cpp
@@ -100,14 +114,46 @@ CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fa
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__type_support_c.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/messi/my_ws/build/test_package/rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__type_support_c.cpp -o CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__type_support_c.cpp.s
 
+CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp.o: CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp
+CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp.o: CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/messi/my_ws/build/test_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp.o -MF CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp.o.d -o CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp.o -c /home/messi/my_ws/build/test_package/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp
+
+CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/messi/my_ws/build/test_package/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp > CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp.i
+
+CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/messi/my_ws/build/test_package/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp -o CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp.s
+
+CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.o: CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp
+CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.o: CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/messi/my_ws/build/test_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.o -MF CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.o.d -o CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.o -c /home/messi/my_ws/build/test_package/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp
+
+CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/messi/my_ws/build/test_package/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp > CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.i
+
+CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/messi/my_ws/build/test_package/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp -o CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.s
+
 # Object files for target test_package__rosidl_typesupport_fastrtps_c
 test_package__rosidl_typesupport_fastrtps_c_OBJECTS = \
-"CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__type_support_c.cpp.o"
+"CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__type_support_c.cpp.o" \
+"CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp.o" \
+"CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.o"
 
 # External object files for target test_package__rosidl_typesupport_fastrtps_c
 test_package__rosidl_typesupport_fastrtps_c_EXTERNAL_OBJECTS =
 
 libtest_package__rosidl_typesupport_fastrtps_c.so: CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__type_support_c.cpp.o
+libtest_package__rosidl_typesupport_fastrtps_c.so: CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp.o
+libtest_package__rosidl_typesupport_fastrtps_c.so: CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.o
 libtest_package__rosidl_typesupport_fastrtps_c.so: CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/build.make
 libtest_package__rosidl_typesupport_fastrtps_c.so: libtest_package__rosidl_generator_c.so
 libtest_package__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
@@ -119,7 +165,7 @@ libtest_package__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/libbuilti
 libtest_package__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libtest_package__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librcutils.so
 libtest_package__rosidl_typesupport_fastrtps_c.so: CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/messi/my_ws/build/test_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libtest_package__rosidl_typesupport_fastrtps_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/messi/my_ws/build/test_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libtest_package__rosidl_typesupport_fastrtps_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -130,8 +176,12 @@ CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/clean
 
+CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp
 CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__type_support_c.cpp
+CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp
 	cd /home/messi/my_ws/build/test_package && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/messi/my_ws/src/test_package /home/messi/my_ws/src/test_package /home/messi/my_ws/build/test_package /home/messi/my_ws/build/test_package /home/messi/my_ws/build/test_package/CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/depend
 

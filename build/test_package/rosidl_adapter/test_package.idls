@@ -1,1 +1,3 @@
 /home/messi/my_ws/build/test_package/rosidl_adapter/test_package:msg/RobotPose.idl
+/home/messi/my_ws/build/test_package/rosidl_adapter/test_package:msg/ManipulatorPose.idl
+/home/messi/my_ws/build/test_package/rosidl_adapter/test_package:srv/IsSuccess.idl

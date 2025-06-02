@@ -95,6 +95,15 @@ bool test_package__msg__robot_pose__convert_from_py(PyObject * _pymsg, void * _r
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
+  {  // gripper_open
+    PyObject * field = PyObject_GetAttrString(_pymsg, "gripper_open");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->gripper_open = (Py_True == field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -161,6 +170,17 @@ PyObject * test_package__msg__robot_pose__convert_to_py(void * raw_ros_message)
     }
     {
       int rc = PyObject_SetAttrString(_pymessage, "label", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // gripper_open
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->gripper_open ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "gripper_open", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

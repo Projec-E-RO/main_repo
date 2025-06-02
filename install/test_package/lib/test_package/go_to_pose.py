@@ -6,18 +6,25 @@ from rclpy.executors import MultiThreadedExecutor
 from geometry_msgs.msg import Pose
 from builtin_interfaces.msg import Duration
 from moveit_msgs.srv import GetPositionIK
-from control_msgs.action import FollowJointTrajectory
+from control_msgs.action import FollowJointTrajectory, GripperCommand
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from rclpy.action import ActionClient
+from action_msgs.msg import GoalStatus
 from test_package.msg import RobotPose
 
-class GoToPose(Node):
+class GoToPoseWithGripper(Node):
     def __init__(self):
-        super().__init__('go_to_pose_demo')
+        super().__init__('go_to_pose_with_gripper')
+        
+        # 그리퍼 상수 정의
+        self.OPEN_POS = 0.03
+        self.CLOSE_POS = 0.001
+        self.MAX_EFFORT = 0.5
         
         # 1. 콜백 그룹 생성
-        self.sub_cb_group = MutuallyExclusiveCallbackGroup() # 서로 다른 콜백이 동시에 실행되지 않도록
-        self.service_cb_group = MutuallyExclusiveCallbackGroup() 
+        self.sub_cb_group = MutuallyExclusiveCallbackGroup()
+        self.service_cb_group = MutuallyExclusiveCallbackGroup()
+        self.gripper_cb_group = MutuallyExclusiveCallbackGroup()
         
         # 2. 서비스 클라이언트 초기화 (별도 콜백 그룹 할당)
         self.ik_cli = self.create_client(
@@ -27,20 +34,29 @@ class GoToPose(Node):
         while not self.ik_cli.wait_for_service(1.0):
             self.get_logger().info('Waiting for /compute_ik service...')
         
-        # 3. 액션 클라이언트 초기화
+        # 3. 액션 클라이언트 초기화 (팔 제어)
         self.traj_cli = ActionClient(
             self, FollowJointTrajectory,
             '/arm_controller/follow_joint_trajectory'
         )
         
-        # 4. 구독자 생성 (별도 콜백 그룹 할당)
+        # 4. 그리퍼 액션 클라이언트 초기화
+        self.gripper_cli = ActionClient(
+            self, GripperCommand,
+            '/gripper_controller/gripper_cmd',
+            callback_group=self.gripper_cb_group
+        )
+        
+        # 5. 구독자 생성 (별도 콜백 그룹 할당)
         self.subscription = self.create_subscription(
             RobotPose, 'object_position_with_tf', 
             self.pose_callback, 10,
             callback_group=self.sub_cb_group
         )
         
-        self.get_logger().info('노드 초기화 완료')
+        # 그리퍼 서버 대기
+        self.gripper_cli.wait_for_server()
+        self.get_logger().info('노드 초기화 완료 (그리퍼 포함)')
 
     def pose_callback(self, msg):
         self.get_logger().info(f'수신 좌표: x={msg.x:.3f}, y={msg.y:.3f}, z={msg.z:.3f}')
@@ -50,6 +66,12 @@ class GoToPose(Node):
         target_pose.position.z = msg.z
         target_pose.orientation.w = 1.0
         
+        # 먼저 그리퍼를 열고 시작
+        self._control_gripper(self.OPEN_POS, 'open', 
+                             lambda: self._start_arm_movement(target_pose))
+
+    def _start_arm_movement(self, target_pose):
+        """그리퍼 열기 완료 후 팔 이동 시작"""
         # 비동기 서비스 호출
         future = self.ik_cli.call_async(
             self._create_ik_request(target_pose)
@@ -129,12 +151,53 @@ class GoToPose(Node):
                 f'z={target_pose.position.z:.3f}'
             )
 
+    def _control_gripper(self, position: float, tag: str, callback=None):
+        """그리퍼 제어 함수"""
+        goal = GripperCommand.Goal()
+        goal.command.position = position
+        goal.command.max_effort = self.MAX_EFFORT
+
+        self.get_logger().info(f'{tag.capitalize()} … (pos={position})')
+
+        # 1) goal 전송
+        send_future = self.gripper_cli.send_goal_async(goal)
+        send_future.add_done_callback(
+            lambda fut: self._handle_gripper_goal(fut, tag, callback)
+        )
+
+    def _handle_gripper_goal(self, future, tag: str, callback=None):
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().error(f'{tag.capitalize()} goal rejected')
+            return
+
+        # 2) 결과 대기
+        res_future = goal_handle.get_result_async()
+        res_future.add_done_callback(
+            lambda fut: self._handle_gripper_result(fut, tag, callback)
+        )
+
+    def _handle_gripper_result(self, future, tag: str, callback=None):
+        wrapped = future.result()
+        status = wrapped.status
+        reached = wrapped.result.reached_goal
+        stalled = wrapped.result.stalled
+
+        if status == GoalStatus.STATUS_SUCCEEDED and reached:
+            self.get_logger().info(f'{tag.capitalize()} done')
+            # 그리퍼 동작 완료 후 콜백 실행
+            if callback:
+                callback()
+        else:
+            self.get_logger().error(
+                f'{tag.capitalize()} failed (status={status}, stalled={stalled})')
+
 def main():
     rclpy.init()
-    node = GoToPose()
+    node = GoToPoseWithGripper()
     
-    # 5. 멀티스레드 Executor 설정
-    executor = MultiThreadedExecutor(num_threads=4)
+    # 멀티스레드 Executor 설정 (그리퍼 제어를 위해 스레드 수 증가)
+    executor = MultiThreadedExecutor(num_threads=6)
     executor.add_node(node)
     
     try:

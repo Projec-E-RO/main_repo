@@ -76,10 +76,18 @@ rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp: /opt/ros/hum
 rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_c/resource/msg__type_support.cpp.em
 rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_c/resource/srv__type_support.cpp.em
 rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp: rosidl_adapter/test_package/msg/RobotPose.idl
+rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp: rosidl_adapter/test_package/msg/ManipulatorPose.idl
+rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp: rosidl_adapter/test_package/srv/IsSuccess.idl
 rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/messi/my_ws/build/test_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C type support dispatch for ROS interfaces"
 	/usr/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_c/rosidl_typesupport_c --generator-arguments-file /home/messi/my_ws/build/test_package/rosidl_typesupport_c__arguments.json --typesupports rosidl_typesupport_fastrtps_c rosidl_typesupport_introspection_c
+
+rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp: rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp
+
+rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp: rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp
 
 CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp.o: CMakeFiles/test_package__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp.o: rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp
@@ -95,14 +103,46 @@ CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_pack
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/messi/my_ws/build/test_package/rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp -o CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp.s
 
+CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp.o: CMakeFiles/test_package__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp.o: rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp
+CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp.o: CMakeFiles/test_package__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/messi/my_ws/build/test_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp.o -MF CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp.o.d -o CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp.o -c /home/messi/my_ws/build/test_package/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp
+
+CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/messi/my_ws/build/test_package/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp > CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp.i
+
+CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/messi/my_ws/build/test_package/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp -o CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp.s
+
+CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.o: CMakeFiles/test_package__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.o: rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp
+CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.o: CMakeFiles/test_package__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/messi/my_ws/build/test_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.o -MF CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.o.d -o CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.o -c /home/messi/my_ws/build/test_package/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp
+
+CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/messi/my_ws/build/test_package/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp > CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.i
+
+CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/messi/my_ws/build/test_package/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp -o CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.s
+
 # Object files for target test_package__rosidl_typesupport_c
 test_package__rosidl_typesupport_c_OBJECTS = \
-"CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp.o"
+"CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp.o" \
+"CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp.o" \
+"CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.o"
 
 # External object files for target test_package__rosidl_typesupport_c
 test_package__rosidl_typesupport_c_EXTERNAL_OBJECTS =
 
 libtest_package__rosidl_typesupport_c.so: CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp.o
+libtest_package__rosidl_typesupport_c.so: CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp.o
+libtest_package__rosidl_typesupport_c.so: CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.o
 libtest_package__rosidl_typesupport_c.so: CMakeFiles/test_package__rosidl_typesupport_c.dir/build.make
 libtest_package__rosidl_typesupport_c.so: libtest_package__rosidl_generator_c.so
 libtest_package__rosidl_typesupport_c.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
@@ -111,7 +151,7 @@ libtest_package__rosidl_typesupport_c.so: /opt/ros/humble/lib/libbuiltin_interfa
 libtest_package__rosidl_typesupport_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libtest_package__rosidl_typesupport_c.so: /opt/ros/humble/lib/librcutils.so
 libtest_package__rosidl_typesupport_c.so: CMakeFiles/test_package__rosidl_typesupport_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/messi/my_ws/build/test_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libtest_package__rosidl_typesupport_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/messi/my_ws/build/test_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libtest_package__rosidl_typesupport_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_package__rosidl_typesupport_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -122,7 +162,9 @@ CMakeFiles/test_package__rosidl_typesupport_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/test_package__rosidl_typesupport_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/test_package__rosidl_typesupport_c.dir/clean
 
+CMakeFiles/test_package__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp
 CMakeFiles/test_package__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp
+CMakeFiles/test_package__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp
 	cd /home/messi/my_ws/build/test_package && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/messi/my_ws/src/test_package /home/messi/my_ws/src/test_package /home/messi/my_ws/build/test_package /home/messi/my_ws/build/test_package /home/messi/my_ws/build/test_package/CMakeFiles/test_package__rosidl_typesupport_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test_package__rosidl_typesupport_c.dir/depend
 

@@ -1,0 +1,314 @@
+[0.000000] (-) TimerEvent: {}
+[0.000557] (test_package) JobQueued: {'identifier': 'test_package', 'dependencies': OrderedDict()}
+[0.000580] (test_package) JobStarted: {'identifier': 'test_package'}
+[0.006243] (test_package) JobProgress: {'identifier': 'test_package', 'progress': 'cmake'}
+[0.006700] (test_package) JobProgress: {'identifier': 'test_package', 'progress': 'build'}
+[0.007342] (test_package) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/messi/my_ws/build/test_package', '--', '-j12', '-l12'], 'cwd': '/home/messi/my_ws/build/test_package', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'messi'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/messi/my_ws/install/test_package/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins::/usr/local/lib'), ('HOME', '/home/messi'), ('OLDPWD', '/home/messi/my_ws/src/test_package/srv'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1956'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=17f80660af758261e1a642e56838cb6d'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/messi/my_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'messi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'messi'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/messi/colcon_ws/install/open_manipulator_x_bringup/share/open_manipulator_x_bringup/models:/usr/share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/opt/ros/humble/bin:/home/messi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/messi:@/tmp/.ICE-unix/1956,unix/messi:/tmp/.ICE-unix/1956'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/709da617_5b1f_42d9_8b4f_0de6cb8a40d0'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.87ML72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.196'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '47'), ('AMENT_PREFIX_PATH', '/home/messi/my_ws/install/test_package:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GAZEBO_RESOURCE_PATH', '/home/messi/colcon_ws/install/open_manipulator_x_bringup/share:/usr/share/gazebo-11:'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/messi/my_ws/build/test_package'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=17f80660af758261e1a642e56838cb6d'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/messi/my_ws/install/test_package:/opt/ros/humble')]), 'shell': False}
+[0.028637] (test_package) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099913] (-) TimerEvent: {}
+[0.124615] (test_package) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)\n'}
+[0.143424] (test_package) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.145356] (test_package) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.150001] (test_package) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.157580] (test_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.167554] (test_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.176519] (test_package) StdoutLine: {'line': b'-- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.199978] (-) TimerEvent: {}
+[0.213034] (test_package) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.300065] (-) TimerEvent: {}
+[0.400250] (-) TimerEvent: {}
+[0.410306] (test_package) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.500330] (-) TimerEvent: {}
+[0.600511] (-) TimerEvent: {}
+[0.641850] (test_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.700593] (-) TimerEvent: {}
+[0.732192] (test_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.751013] (test_package) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[0.769288] (test_package) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.769388] (test_package) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[0.769438] (test_package) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[0.778804] (test_package) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.786857] (test_package) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[0.787492] (test_package) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.787829] (test_package) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[0.789701] (test_package) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.790836] (test_package) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.800656] (-) TimerEvent: {}
+[0.812983] (test_package) StdoutLine: {'line': b'-- Generating done\n'}
+[0.821891] (test_package) StdoutLine: {'line': b'-- Build files have been written to: /home/messi/my_ws/build/test_package\n'}
+[0.840622] (test_package) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[0.848308] (test_package) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[0.855475] (test_package) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_test_package\n'}
+[0.900776] (-) TimerEvent: {}
+[1.000993] (-) TimerEvent: {}
+[1.088344] (test_package) StdoutLine: {'line': b'running egg_info\n'}
+[1.088973] (test_package) StdoutLine: {'line': b'writing test_package.egg-info/PKG-INFO\n'}
+[1.089214] (test_package) StdoutLine: {'line': b'writing dependency_links to test_package.egg-info/dependency_links.txt\n'}
+[1.089424] (test_package) StdoutLine: {'line': b'writing top-level names to test_package.egg-info/top_level.txt\n'}
+[1.091581] (test_package) StdoutLine: {'line': b"reading manifest file 'test_package.egg-info/SOURCES.txt'\n"}
+[1.092247] (test_package) StdoutLine: {'line': b"writing manifest file 'test_package.egg-info/SOURCES.txt'\n"}
+[1.101190] (-) TimerEvent: {}
+[1.118632] (test_package) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_build_test_package_egg\n'}
+[1.124415] (test_package) StdoutLine: {'line': b'[  5%] Built target test_package__cpp\n'}
+[1.124620] (test_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target test_package__rosidl_generator_c\x1b[0m\n'}
+[1.132894] (test_package) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.133072] (test_package) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.133162] (test_package) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.133922] (test_package) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/test_package__rosidl_generator_c.dir/rosidl_generator_c/test_package/srv/detail/is_success__functions.c.o\x1b[0m\n'}
+[1.134048] (test_package) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/test_package__rosidl_generator_c.dir/rosidl_generator_c/test_package/msg/detail/robot_pose__functions.c.o\x1b[0m\n'}
+[1.180767] (test_package) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libtest_package__rosidl_generator_c.so\x1b[0m\n'}
+[1.201283] (-) TimerEvent: {}
+[1.209175] (test_package) StdoutLine: {'line': b'[ 20%] Built target test_package__rosidl_generator_c\n'}
+[1.216617] (test_package) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.216783] (test_package) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.216882] (test_package) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[1.301375] (-) TimerEvent: {}
+[1.347406] (test_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_cpp\x1b[0m\n'}
+[1.357104] (test_package) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/test_package/msg/robot_pose__type_support.cpp.o\x1b[0m\n'}
+[1.360013] (test_package) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/test_package/srv/is_success__type_support.cpp.o\x1b[0m\n'}
+[1.372497] (test_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[1.386757] (test_package) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/test_package/msg/detail/robot_pose__type_support.cpp.o\x1b[0m\n'}
+[1.386899] (test_package) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/test_package/srv/detail/is_success__type_support.cpp.o\x1b[0m\n'}
+[1.397185] (test_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[1.401458] (-) TimerEvent: {}
+[1.412439] (test_package) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/test_package/msg/detail/dds_fastrtps/robot_pose__type_support.cpp.o\x1b[0m\n'}
+[1.412616] (test_package) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/test_package/srv/detail/dds_fastrtps/is_success__type_support.cpp.o\x1b[0m\n'}
+[1.447973] (test_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_c\x1b[0m\n'}
+[1.460020] (test_package) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp.o\x1b[0m\n'}
+[1.460212] (test_package) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.o\x1b[0m\n'}
+[1.489591] (test_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[1.500318] (test_package) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libtest_package__rosidl_typesupport_c.so\x1b[0m\n'}
+[1.501554] (-) TimerEvent: {}
+[1.506018] (test_package) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__type_support_c.cpp.o\x1b[0m\n'}
+[1.506228] (test_package) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.o\x1b[0m\n'}
+[1.518011] (test_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[1.530901] (test_package) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding C object CMakeFiles/test_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/test_package/msg/detail/robot_pose__type_support.c.o\x1b[0m\n'}
+[1.531102] (test_package) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding C object CMakeFiles/test_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/test_package/srv/detail/is_success__type_support.c.o\x1b[0m\n'}
+[1.555537] (test_package) StdoutLine: {'line': b'[ 61%] Built target test_package__rosidl_typesupport_c\n'}
+[1.574790] (test_package) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking C shared library libtest_package__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[1.601665] (-) TimerEvent: {}
+[1.611768] (test_package) StdoutLine: {'line': b'[ 64%] Built target test_package__rosidl_typesupport_introspection_c\n'}
+[1.636822] (test_package) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX shared library libtest_package__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[1.670379] (test_package) StdoutLine: {'line': b'[ 66%] Built target test_package__rosidl_typesupport_cpp\n'}
+[1.701754] (-) TimerEvent: {}
+[1.801998] (-) TimerEvent: {}
+[1.818327] (test_package) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library libtest_package__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[1.859257] (test_package) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libtest_package__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[1.869393] (test_package) StdoutLine: {'line': b'[ 71%] Built target test_package__rosidl_typesupport_introspection_cpp\n'}
+[1.869869] (test_package) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libtest_package__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[1.902093] (-) TimerEvent: {}
+[1.917537] (test_package) StdoutLine: {'line': b'[ 74%] Built target test_package__rosidl_typesupport_fastrtps_c\n'}
+[1.927891] (test_package) StdoutLine: {'line': b'[ 74%] Built target test_package__rosidl_typesupport_fastrtps_cpp\n'}
+[1.942555] (test_package) StdoutLine: {'line': b'[ 74%] Built target test_package\n'}
+[1.956701] (test_package) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[2.002199] (-) TimerEvent: {}
+[2.102391] (-) TimerEvent: {}
+[2.202581] (-) TimerEvent: {}
+[2.302793] (-) TimerEvent: {}
+[2.310682] (test_package) StdoutLine: {'line': b'[ 76%] Built target test_package__py\n'}
+[2.319033] (test_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target test_package__rosidl_generator_py\x1b[0m\n'}
+[2.328241] (test_package) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/test_package__rosidl_generator_py.dir/rosidl_generator_py/test_package/msg/_robot_pose_s.c.o\x1b[0m\n'}
+[2.328407] (test_package) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/test_package__rosidl_generator_py.dir/rosidl_generator_py/test_package/srv/_is_success_s.c.o\x1b[0m\n'}
+[2.402953] (-) TimerEvent: {}
+[2.412853] (test_package) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/test_package/libtest_package__rosidl_generator_py.so\x1b[0m\n'}
+[2.442233] (test_package) StdoutLine: {'line': b'[ 84%] Built target test_package__rosidl_generator_py\n'}
+[2.449845] (test_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[2.449989] (test_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[2.450045] (test_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[2.459041] (test_package) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/test_package__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[2.459239] (test_package) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/test_package__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[2.459330] (test_package) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/test_package__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[2.503033] (-) TimerEvent: {}
+[2.540706] (test_package) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/test_package/test_package_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.540928] (test_package) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/test_package/test_package_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.541024] (test_package) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/test_package/test_package_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.568864] (test_package) StdoutLine: {'line': b'[100%] Built target test_package__rosidl_typesupport_introspection_c__pyext\n'}
+[2.569053] (test_package) StdoutLine: {'line': b'[100%] Built target test_package__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.569139] (test_package) StdoutLine: {'line': b'[100%] Built target test_package__rosidl_typesupport_c__pyext\n'}
+[2.577390] (test_package) CommandEnded: {'returncode': 0}
+[2.578187] (test_package) JobProgress: {'identifier': 'test_package', 'progress': 'install'}
+[2.584686] (test_package) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/messi/my_ws/build/test_package'], 'cwd': '/home/messi/my_ws/build/test_package', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'messi'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/messi/my_ws/install/test_package/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins::/usr/local/lib'), ('HOME', '/home/messi'), ('OLDPWD', '/home/messi/my_ws/src/test_package/srv'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1956'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=17f80660af758261e1a642e56838cb6d'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/messi/my_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'messi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'messi'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/messi/colcon_ws/install/open_manipulator_x_bringup/share/open_manipulator_x_bringup/models:/usr/share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/opt/ros/humble/bin:/home/messi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/messi:@/tmp/.ICE-unix/1956,unix/messi:/tmp/.ICE-unix/1956'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/709da617_5b1f_42d9_8b4f_0de6cb8a40d0'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.87ML72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.196'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '47'), ('AMENT_PREFIX_PATH', '/home/messi/my_ws/install/test_package:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GAZEBO_RESOURCE_PATH', '/home/messi/colcon_ws/install/open_manipulator_x_bringup/share:/usr/share/gazebo-11:'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/messi/my_ws/build/test_package'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=17f80660af758261e1a642e56838cb6d'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/messi/my_ws/install/test_package:/opt/ros/humble')]), 'shell': False}
+[2.590417] (test_package) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.590559] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/ament_index/resource_index/rosidl_interfaces/test_package\n'}
+[2.590621] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package\n'}
+[2.590685] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg\n'}
+[2.590747] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/robot_pose.h\n'}
+[2.590880] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail\n'}
+[2.590955] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__functions.c\n'}
+[2.591018] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__functions.h\n'}
+[2.591079] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__struct.h\n'}
+[2.591140] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__type_support.h\n'}
+[2.591224] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.591340] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv\n'}
+[2.591397] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/is_success.h\n'}
+[2.591483] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail\n'}
+[2.591532] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__struct.h\n'}
+[2.591578] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__functions.h\n'}
+[2.591626] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__functions.c\n'}
+[2.591686] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__type_support.h\n'}
+[2.591746] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/environment/library_path.sh\n'}
+[2.591826] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/share/test_package/environment/library_path.dsv\n'}
+[2.591951] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_generator_c.so\n'}
+[2.592062] (test_package) StdoutLine: {'line': b'-- Set runtime path of "/home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_generator_c.so" to ""\n'}
+[2.592128] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package\n'}
+[2.592188] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg\n'}
+[2.592247] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.592307] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail\n'}
+[2.592366] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[2.592455] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv\n'}
+[2.592517] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail\n'}
+[2.592577] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__rosidl_typesupport_fastrtps_c.h\n'}
+[2.592637] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_fastrtps_c.so\n'}
+[2.592719] (test_package) StdoutLine: {'line': b'-- Set runtime path of "/home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[2.592853] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package\n'}
+[2.592932] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg\n'}
+[2.593005] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[2.593068] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail\n'}
+[2.593128] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__struct.hpp\n'}
+[2.593222] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__type_support.hpp\n'}
+[2.593283] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__builder.hpp\n'}
+[2.593343] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__traits.hpp\n'}
+[2.593402] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/robot_pose.hpp\n'}
+[2.593461] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv\n'}
+[2.593521] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/is_success.hpp\n'}
+[2.593580] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail\n'}
+[2.593639] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__traits.hpp\n'}
+[2.593720] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__type_support.hpp\n'}
+[2.593850] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__builder.hpp\n'}
+[2.593953] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__struct.hpp\n'}
+[2.594003] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package\n'}
+[2.594047] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg\n'}
+[2.594091] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[2.594134] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail\n'}
+[2.594193] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.594253] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/dds_fastrtps\n'}
+[2.594312] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv\n'}
+[2.594371] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail\n'}
+[2.594430] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/dds_fastrtps\n'}
+[2.594489] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.594549] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_fastrtps_cpp.so\n'}
+[2.594630] (test_package) StdoutLine: {'line': b'-- Set runtime path of "/home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[2.594742] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package\n'}
+[2.594799] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg\n'}
+[2.594866] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.594944] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail\n'}
+[2.595006] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__type_support.c\n'}
+[2.595066] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__rosidl_typesupport_introspection_c.h\n'}
+[2.595126] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv\n'}
+[2.595187] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail\n'}
+[2.595246] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__rosidl_typesupport_introspection_c.h\n'}
+[2.595306] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__type_support.c\n'}
+[2.595366] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_introspection_c.so\n'}
+[2.595448] (test_package) StdoutLine: {'line': b'-- Set runtime path of "/home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_introspection_c.so" to ""\n'}
+[2.595562] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_c.so\n'}
+[2.595629] (test_package) StdoutLine: {'line': b'-- Set runtime path of "/home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_c.so" to ""\n'}
+[2.595690] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package\n'}
+[2.595751] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg\n'}
+[2.595839] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail\n'}
+[2.595945] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__type_support.cpp\n'}
+[2.595994] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.596044] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv\n'}
+[2.596122] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail\n'}
+[2.596187] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__type_support.cpp\n'}
+[2.596247] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.596307] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_introspection_cpp.so\n'}
+[2.596366] (test_package) StdoutLine: {'line': b'-- Set runtime path of "/home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[2.596448] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_cpp.so\n'}
+[2.596531] (test_package) StdoutLine: {'line': b'-- Set runtime path of "/home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_cpp.so" to ""\n'}
+[2.596593] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/environment/pythonpath.sh\n'}
+[2.596653] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/share/test_package/environment/pythonpath.dsv\n'}
+[2.596713] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package-0.0.0-py3.10.egg-info\n'}
+[2.596772] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[2.596853] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[2.596951] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[2.597042] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[2.597093] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package\n'}
+[2.597153] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[2.597213] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.597307] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.597362] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/libtest_package__rosidl_generator_py.so\n'}
+[2.597423] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg\n'}
+[2.597484] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg/_robot_pose.py\n'}
+[2.597545] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg/_robot_pose_s.c\n'}
+[2.597626] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg/__init__.py\n'}
+[2.597734] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/_test_package_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[2.597802] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.597864] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/_test_package_s.ep.rosidl_typesupport_c.c\n'}
+[2.597996] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/__init__.py\n'}
+[2.598042] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/srv\n'}
+[2.598092] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/srv/_is_success_s.c\n'}
+[2.598137] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/srv/__init__.py\n'}
+[2.598185] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/srv/_is_success.py\n'}
+[2.603087] (-) TimerEvent: {}
+[2.626906] (test_package) StdoutLine: {'line': b"Listing '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package'...\n"}
+[2.627006] (test_package) StdoutLine: {'line': b"Compiling '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/__init__.py'...\n"}
+[2.627060] (test_package) StdoutLine: {'line': b"Listing '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg'...\n"}
+[2.627108] (test_package) StdoutLine: {'line': b"Compiling '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg/__init__.py'...\n"}
+[2.627153] (test_package) StdoutLine: {'line': b"Compiling '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg/_robot_pose.py'...\n"}
+[2.627198] (test_package) StdoutLine: {'line': b"Listing '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/srv'...\n"}
+[2.627242] (test_package) StdoutLine: {'line': b"Compiling '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/srv/__init__.py'...\n"}
+[2.627286] (test_package) StdoutLine: {'line': b"Compiling '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/srv/_is_success.py'...\n"}
+[2.630533] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.630728] (test_package) StdoutLine: {'line': b'-- Set runtime path of "/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[2.630847] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.631046] (test_package) StdoutLine: {'line': b'-- Set runtime path of "/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[2.631156] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.631315] (test_package) StdoutLine: {'line': b'-- Set runtime path of "/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[2.631418] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_generator_py.so\n'}
+[2.631595] (test_package) StdoutLine: {'line': b'-- Set runtime path of "/home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_generator_py.so" to ""\n'}
+[2.631680] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/msg/RobotPose.idl\n'}
+[2.631743] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/share/test_package/srv/IsSuccess.idl\n'}
+[2.631830] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/msg/RobotPose.msg\n'}
+[2.631982] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/share/test_package/srv/IsSuccess.srv\n'}
+[2.632031] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/share/test_package/srv/IsSuccess_Request.msg\n'}
+[2.632097] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/share/test_package/srv/IsSuccess_Response.msg\n'}
+[2.632181] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/lib/test_package/go_to_pose.py\n'}
+[2.632243] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/lib/test_package/go_to_pose2.py\n'}
+[2.632304] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/lib/test_package/point_publisher.py\n'}
+[2.632365] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/lib/test_package/tf_listener.py\n'}
+[2.632446] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/lib/test_package/main_process_test.py\n'}
+[2.632564] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/launch/launch\n'}
+[2.632618] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/launch/launch/manipulator_all_pickNodes.py\n'}
+[2.632693] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/launch/launch/manipulator_bringup_all.launch.py\n'}
+[2.632755] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/ament_index/resource_index/package_run_dependencies/test_package\n'}
+[2.632868] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/ament_index/resource_index/parent_prefix_path/test_package\n'}
+[2.632947] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/environment/ament_prefix_path.sh\n'}
+[2.632997] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/share/test_package/environment/ament_prefix_path.dsv\n'}
+[2.633059] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/environment/path.sh\n'}
+[2.633119] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/share/test_package/environment/path.dsv\n'}
+[2.633179] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/local_setup.bash\n'}
+[2.633238] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/local_setup.sh\n'}
+[2.633297] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/local_setup.zsh\n'}
+[2.633357] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/share/test_package/local_setup.dsv\n'}
+[2.633416] (test_package) StdoutLine: {'line': b'-- Installing: /home/messi/my_ws/install/test_package/share/test_package/package.dsv\n'}
+[2.633498] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/ament_index/resource_index/packages/test_package\n'}
+[2.633621] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_generator_cExport.cmake\n'}
+[2.633688] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_generator_cExport-noconfig.cmake\n'}
+[2.633749] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[2.633852] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[2.633989] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_generator_cppExport.cmake\n'}
+[2.634059] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[2.634106] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[2.634151] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_package__rosidl_typesupport_introspection_cExport.cmake\n'}
+[2.634196] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_package__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[2.634240] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_package__rosidl_typesupport_cExport.cmake\n'}
+[2.634285] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_package__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[2.634329] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_package__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[2.634380] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_package__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[2.634424] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_package__rosidl_typesupport_cppExport.cmake\n'}
+[2.634468] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_package__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[2.634513] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_generator_pyExport.cmake\n'}
+[2.634557] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_generator_pyExport-noconfig.cmake\n'}
+[2.634601] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/rosidl_cmake-extras.cmake\n'}
+[2.634645] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.634689] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.634737] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.634782] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[2.634846] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[2.634915] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[2.634962] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_packageConfig.cmake\n'}
+[2.635010] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_packageConfig-version.cmake\n'}
+[2.635054] (test_package) StdoutLine: {'line': b'-- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/package.xml\n'}
+[2.635710] (test_package) CommandEnded: {'returncode': 0}
+[2.651607] (test_package) JobEnded: {'identifier': 'test_package', 'rc': 0}
+[2.652031] (-) EventReactorShutdown: {}

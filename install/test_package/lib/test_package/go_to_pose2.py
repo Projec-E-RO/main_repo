@@ -1,92 +1,78 @@
 #!/usr/bin/env python3
 """
-go_to_pose.py ― 한 줄 실행으로
-1) /compute_ik  → 역기구학
-2) /arm_controller/follow_joint_trajectory → 궤적 실행
-(ROS 2 Humble + MoveIt 2 + OpenMANIPULATOR-X)
+direct_joint_control.py ― 관절 각도를 라디안 단위로 직접 지정하여 제어
+(ROS 2 Humble + OpenMANIPULATOR-X)
 """
 
 import rclpy
 from rclpy.node import Node
-from geometry_msgs.msg import Pose
 from builtin_interfaces.msg import Duration
-from moveit_msgs.srv import GetPositionIK
 from control_msgs.action import FollowJointTrajectory
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from rclpy.action import ActionClient
+import math
 
 
-class GoToPose(Node):
+class DirectJointControl(Node):
     def __init__(self):
-        super().__init__('go_to_pose_demo')
+        super().__init__('direct_joint_control')
 
-        # --- IK 서비스 / Trajectory 액션 클라이언트 -------------------------
-        self.ik_cli = self.create_client(GetPositionIK, '/compute_ik')
-        while not self.ik_cli.wait_for_service(1.0):
-            self.get_logger().info('waiting for /compute_ik ...')
-
+        # --- Trajectory 액션 클라이언트 -----------------------------------
         self.traj_cli = ActionClient(
             self, FollowJointTrajectory,
             '/arm_controller/follow_joint_trajectory')
 
-        # --- 목표 Pose -------------------------------------------------------
-        self.target_pose = Pose()
-        self.target_pose.position.x = 0.2
-        self.target_pose.position.y = 0.10
-        self.target_pose.position.z = 0.15
-        self.target_pose.orientation.x = 0.0
-        self.target_pose.orientation.y = 0.0
-        self.target_pose.orientation.z = 0.0
-        self.target_pose.orientation.w = 1.0
+        # --- 목표 관절 각도 (라디안 단위) ---------------------------------
+        # 여기서 원하는 각도를 라디안 단위로 직접 설정하세요!
+        self.target_joints = {
+            'joint1': 0.000,    # 약 30도 (rad)
+            'joint2': -1.203,   # 약 -45도 (rad)
+            'joint3': 1.102,    # 약 60도 (rad)
+            'joint4': 0.121        # 0도 (rad)
+        }
 
         # 실행
-        self.move()
+        self.move_to_joints()
 
     # -----------------------------------------------------------------------
-    def move(self):
-        # 1) IK 요청 ---------------------------------------------------------
-        req = GetPositionIK.Request()
-        req.ik_request.group_name = 'arm'
-        req.ik_request.pose_stamped.header.frame_id = 'world'
-        req.ik_request.pose_stamped.pose = self.target_pose
-        req.ik_request.timeout = Duration(sec=2)
+    def move_to_joints(self):
+        """직접 지정한 관절 각도로 이동"""
+        
+        # 1) 관절 이름과 각도 리스트 생성 -----------------------------------
+        arm_joints = ['joint1', 'joint2', 'joint3', 'joint4']
+        target_positions = [self.target_joints[joint] for joint in arm_joints]
+        
+        self.get_logger().info('Target joint angles:')
+        for joint, angle_rad in self.target_joints.items():
+            angle_deg = math.degrees(angle_rad)
+            self.get_logger().info(f'  {joint}: {angle_rad:.4f} rad ({angle_deg:.1f}°)')
 
-        future = self.ik_cli.call_async(req)
-        rclpy.spin_until_future_complete(self, future)
-        if future.result().error_code.val != 1:   # SUCCESS = 1
-            self.get_logger().error('IK failed'); rclpy.shutdown(); return
-
-        js_names = future.result().solution.joint_state.name
-        js_pos   = future.result().solution.joint_state.position
-        joint_map = dict(zip(js_names, js_pos))
-        self.get_logger().info(f'IK OK: {joint_map}')
-
-        # 2) 4개 관절만 궤적 작성 ------------------------------------------
-        arm_jnts = ['joint1', 'joint2', 'joint3', 'joint4']
-        pos_arm  = [joint_map[j] for j in arm_jnts]
-        self.get_logger().info(f'1')
-
+        # 2) 궤적 메시지 생성 ----------------------------------------------
         traj = JointTrajectory()
-        traj.joint_names = arm_jnts
+        traj.joint_names = arm_joints
+        
+        # 궤적 포인트 생성
         pt = JointTrajectoryPoint()
-        pt.positions = pos_arm
-        pt.time_from_start = Duration(sec=2)
+        pt.positions = target_positions
+        pt.time_from_start = Duration(sec=3)  # 3초 동안 이동
         traj.points.append(pt)
-        self.get_logger().info(f'2')
 
         goal = FollowJointTrajectory.Goal(trajectory=traj)
 
-        # 3) 액션 전송 & 결과 대기 ------------------------------------------
+        # 3) 액션 전송 & 결과 대기 -----------------------------------------
         self.traj_cli.wait_for_server()
-        self.get_logger().info(f'3')
+        self.get_logger().info('Sending joint trajectory goal...')
+        
         gh_future = self.traj_cli.send_goal_async(goal)
         rclpy.spin_until_future_complete(self, gh_future)
         gh = gh_future.result()
-        self.get_logger().info(f'4')
+        
         if not gh.accepted:
-            self.get_logger().info(f'4-1')
-            self.get_logger().error('Trajectory goal rejected'); rclpy.shutdown(); return
+            self.get_logger().error('Trajectory goal rejected')
+            rclpy.shutdown()
+            return
 
+        # 결과 대기
         res_future = gh.get_result_async()
         rclpy.spin_until_future_complete(self, res_future)
         err = res_future.result().result.error_code
@@ -96,9 +82,8 @@ class GoToPose(Node):
 
 def main():
     rclpy.init()
-    GoToPose()
+    DirectJointControl()
 
 
 if __name__ == '__main__':
     main()
-

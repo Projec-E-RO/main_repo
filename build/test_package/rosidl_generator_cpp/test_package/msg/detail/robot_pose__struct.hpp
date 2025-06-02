@@ -42,6 +42,7 @@ struct RobotPose_
       this->y = 0.0f;
       this->z = 0.0f;
       this->label = "";
+      this->gripper_open = false;
     }
   }
 
@@ -55,6 +56,7 @@ struct RobotPose_
       this->y = 0.0f;
       this->z = 0.0f;
       this->label = "";
+      this->gripper_open = false;
     }
   }
 
@@ -71,6 +73,9 @@ struct RobotPose_
   using _label_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _label_type label;
+  using _gripper_open_type =
+    bool;
+  _gripper_open_type gripper_open;
 
   // setters for named parameter idiom
   Type & set__x(
@@ -95,6 +100,12 @@ struct RobotPose_
     const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
     this->label = _arg;
+    return *this;
+  }
+  Type & set__gripper_open(
+    const bool & _arg)
+  {
+    this->gripper_open = _arg;
     return *this;
   }
 
@@ -150,6 +161,9 @@ struct RobotPose_
       return false;
     }
     if (this->label != other.label) {
+      return false;
+    }
+    if (this->gripper_open != other.gripper_open) {
       return false;
     }
     return true;

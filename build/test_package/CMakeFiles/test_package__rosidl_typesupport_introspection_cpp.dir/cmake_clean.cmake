@@ -1,10 +1,18 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/test_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/test_package/msg/detail/manipulator_pose__type_support.cpp.o"
+  "CMakeFiles/test_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/test_package/msg/detail/manipulator_pose__type_support.cpp.o.d"
   "CMakeFiles/test_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/test_package/msg/detail/robot_pose__type_support.cpp.o"
   "CMakeFiles/test_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/test_package/msg/detail/robot_pose__type_support.cpp.o.d"
+  "CMakeFiles/test_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/test_package/srv/detail/is_success__type_support.cpp.o"
+  "CMakeFiles/test_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/test_package/srv/detail/is_success__type_support.cpp.o.d"
   "libtest_package__rosidl_typesupport_introspection_cpp.pdb"
   "libtest_package__rosidl_typesupport_introspection_cpp.so"
+  "rosidl_typesupport_introspection_cpp/test_package/msg/detail/manipulator_pose__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/test_package/msg/detail/manipulator_pose__type_support.cpp"
   "rosidl_typesupport_introspection_cpp/test_package/msg/detail/robot_pose__rosidl_typesupport_introspection_cpp.hpp"
   "rosidl_typesupport_introspection_cpp/test_package/msg/detail/robot_pose__type_support.cpp"
+  "rosidl_typesupport_introspection_cpp/test_package/srv/detail/is_success__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/test_package/srv/detail/is_success__type_support.cpp"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -3,8 +3,13 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c"
   "../rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_introspection_c.c"
   "../rosidl_generator_py/test_package/msg/__init__.py"
+  "../rosidl_generator_py/test_package/msg/_manipulator_pose.py"
+  "../rosidl_generator_py/test_package/msg/_manipulator_pose_s.c"
   "../rosidl_generator_py/test_package/msg/_robot_pose.py"
   "../rosidl_generator_py/test_package/msg/_robot_pose_s.c"
+  "../rosidl_generator_py/test_package/srv/__init__.py"
+  "../rosidl_generator_py/test_package/srv/_is_success.py"
+  "../rosidl_generator_py/test_package/srv/_is_success_s.c"
   "CMakeFiles/test_package__py"
 )
 

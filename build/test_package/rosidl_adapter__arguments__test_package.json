@@ -1,6 +1,8 @@
 {
   "package_name": "test_package",
   "non_idl_tuples": [
-    "/home/messi/my_ws/src/test_package:msg/RobotPose.msg"
+    "/home/messi/my_ws/src/test_package:msg/RobotPose.msg",
+    "/home/messi/my_ws/src/test_package:msg/ManipulatorPose.msg",
+    "/home/messi/my_ws/src/test_package:srv/IsSuccess.srv"
   ]
 }

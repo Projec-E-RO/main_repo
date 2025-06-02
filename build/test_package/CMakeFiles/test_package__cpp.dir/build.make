@@ -71,6 +71,16 @@ CMakeFiles/test_package__cpp: rosidl_generator_cpp/test_package/msg/detail/robot
 CMakeFiles/test_package__cpp: rosidl_generator_cpp/test_package/msg/detail/robot_pose__struct.hpp
 CMakeFiles/test_package__cpp: rosidl_generator_cpp/test_package/msg/detail/robot_pose__traits.hpp
 CMakeFiles/test_package__cpp: rosidl_generator_cpp/test_package/msg/detail/robot_pose__type_support.hpp
+CMakeFiles/test_package__cpp: rosidl_generator_cpp/test_package/msg/manipulator_pose.hpp
+CMakeFiles/test_package__cpp: rosidl_generator_cpp/test_package/msg/detail/manipulator_pose__builder.hpp
+CMakeFiles/test_package__cpp: rosidl_generator_cpp/test_package/msg/detail/manipulator_pose__struct.hpp
+CMakeFiles/test_package__cpp: rosidl_generator_cpp/test_package/msg/detail/manipulator_pose__traits.hpp
+CMakeFiles/test_package__cpp: rosidl_generator_cpp/test_package/msg/detail/manipulator_pose__type_support.hpp
+CMakeFiles/test_package__cpp: rosidl_generator_cpp/test_package/srv/is_success.hpp
+CMakeFiles/test_package__cpp: rosidl_generator_cpp/test_package/srv/detail/is_success__builder.hpp
+CMakeFiles/test_package__cpp: rosidl_generator_cpp/test_package/srv/detail/is_success__struct.hpp
+CMakeFiles/test_package__cpp: rosidl_generator_cpp/test_package/srv/detail/is_success__traits.hpp
+CMakeFiles/test_package__cpp: rosidl_generator_cpp/test_package/srv/detail/is_success__type_support.hpp
 CMakeFiles/test_package__cpp: rosidl_generator_cpp/test_package/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/test_package/msg/robot_pose.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -89,6 +99,8 @@ rosidl_generator_cpp/test_package/msg/robot_pose.hpp: /opt/ros/humble/share/rosi
 rosidl_generator_cpp/test_package/msg/robot_pose.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
 rosidl_generator_cpp/test_package/msg/robot_pose.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/test_package/msg/robot_pose.hpp: rosidl_adapter/test_package/msg/RobotPose.idl
+rosidl_generator_cpp/test_package/msg/robot_pose.hpp: rosidl_adapter/test_package/msg/ManipulatorPose.idl
+rosidl_generator_cpp/test_package/msg/robot_pose.hpp: rosidl_adapter/test_package/srv/IsSuccess.idl
 rosidl_generator_cpp/test_package/msg/robot_pose.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/test_package/msg/robot_pose.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/messi/my_ws/build/test_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
@@ -106,12 +118,52 @@ rosidl_generator_cpp/test_package/msg/detail/robot_pose__traits.hpp: rosidl_gene
 rosidl_generator_cpp/test_package/msg/detail/robot_pose__type_support.hpp: rosidl_generator_cpp/test_package/msg/robot_pose.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/test_package/msg/detail/robot_pose__type_support.hpp
 
+rosidl_generator_cpp/test_package/msg/manipulator_pose.hpp: rosidl_generator_cpp/test_package/msg/robot_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/test_package/msg/manipulator_pose.hpp
+
+rosidl_generator_cpp/test_package/msg/detail/manipulator_pose__builder.hpp: rosidl_generator_cpp/test_package/msg/robot_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/test_package/msg/detail/manipulator_pose__builder.hpp
+
+rosidl_generator_cpp/test_package/msg/detail/manipulator_pose__struct.hpp: rosidl_generator_cpp/test_package/msg/robot_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/test_package/msg/detail/manipulator_pose__struct.hpp
+
+rosidl_generator_cpp/test_package/msg/detail/manipulator_pose__traits.hpp: rosidl_generator_cpp/test_package/msg/robot_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/test_package/msg/detail/manipulator_pose__traits.hpp
+
+rosidl_generator_cpp/test_package/msg/detail/manipulator_pose__type_support.hpp: rosidl_generator_cpp/test_package/msg/robot_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/test_package/msg/detail/manipulator_pose__type_support.hpp
+
+rosidl_generator_cpp/test_package/srv/is_success.hpp: rosidl_generator_cpp/test_package/msg/robot_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/test_package/srv/is_success.hpp
+
+rosidl_generator_cpp/test_package/srv/detail/is_success__builder.hpp: rosidl_generator_cpp/test_package/msg/robot_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/test_package/srv/detail/is_success__builder.hpp
+
+rosidl_generator_cpp/test_package/srv/detail/is_success__struct.hpp: rosidl_generator_cpp/test_package/msg/robot_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/test_package/srv/detail/is_success__struct.hpp
+
+rosidl_generator_cpp/test_package/srv/detail/is_success__traits.hpp: rosidl_generator_cpp/test_package/msg/robot_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/test_package/srv/detail/is_success__traits.hpp
+
+rosidl_generator_cpp/test_package/srv/detail/is_success__type_support.hpp: rosidl_generator_cpp/test_package/msg/robot_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/test_package/srv/detail/is_success__type_support.hpp
+
 test_package__cpp: CMakeFiles/test_package__cpp
+test_package__cpp: rosidl_generator_cpp/test_package/msg/detail/manipulator_pose__builder.hpp
+test_package__cpp: rosidl_generator_cpp/test_package/msg/detail/manipulator_pose__struct.hpp
+test_package__cpp: rosidl_generator_cpp/test_package/msg/detail/manipulator_pose__traits.hpp
+test_package__cpp: rosidl_generator_cpp/test_package/msg/detail/manipulator_pose__type_support.hpp
 test_package__cpp: rosidl_generator_cpp/test_package/msg/detail/robot_pose__builder.hpp
 test_package__cpp: rosidl_generator_cpp/test_package/msg/detail/robot_pose__struct.hpp
 test_package__cpp: rosidl_generator_cpp/test_package/msg/detail/robot_pose__traits.hpp
 test_package__cpp: rosidl_generator_cpp/test_package/msg/detail/robot_pose__type_support.hpp
+test_package__cpp: rosidl_generator_cpp/test_package/msg/manipulator_pose.hpp
 test_package__cpp: rosidl_generator_cpp/test_package/msg/robot_pose.hpp
+test_package__cpp: rosidl_generator_cpp/test_package/srv/detail/is_success__builder.hpp
+test_package__cpp: rosidl_generator_cpp/test_package/srv/detail/is_success__struct.hpp
+test_package__cpp: rosidl_generator_cpp/test_package/srv/detail/is_success__traits.hpp
+test_package__cpp: rosidl_generator_cpp/test_package/srv/detail/is_success__type_support.hpp
+test_package__cpp: rosidl_generator_cpp/test_package/srv/is_success.hpp
 test_package__cpp: CMakeFiles/test_package__cpp.dir/build.make
 .PHONY : test_package__cpp
 

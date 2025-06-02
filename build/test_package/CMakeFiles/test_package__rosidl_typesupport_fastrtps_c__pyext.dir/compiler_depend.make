@@ -247,8 +247,20 @@ CMakeFiles/test_package__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generat
   rosidl_generator_c/test_package/msg/detail/robot_pose__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
-  rosidl_generator_c/test_package/msg/detail/robot_pose__functions.h
+  rosidl_generator_c/test_package/msg/detail/robot_pose__functions.h \
+  rosidl_generator_c/test_package/msg/detail/manipulator_pose__type_support.h \
+  rosidl_generator_c/test_package/msg/detail/manipulator_pose__struct.h \
+  rosidl_generator_c/test_package/msg/detail/manipulator_pose__functions.h \
+  rosidl_generator_c/test_package/srv/detail/is_success__type_support.h \
+  rosidl_generator_c/test_package/srv/detail/is_success__struct.h \
+  rosidl_generator_c/test_package/srv/detail/is_success__functions.h
 
+
+rosidl_generator_c/test_package/srv/detail/is_success__functions.h:
+
+rosidl_generator_c/test_package/srv/detail/is_success__type_support.h:
+
+rosidl_generator_c/test_package/msg/detail/manipulator_pose__functions.h:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
@@ -336,6 +348,8 @@ rosidl_generator_c/test_package/msg/detail/robot_pose__functions.h:
 
 /usr/include/python3.10/cpython/tupleobject.h:
 
+rosidl_generator_c/test_package/msg/detail/manipulator_pose__struct.h:
+
 /usr/include/python3.10/enumobject.h:
 
 /usr/include/python3.10/memoryobject.h:
@@ -405,6 +419,8 @@ rosidl_generator_c/test_package/msg/detail/robot_pose__type_support.h:
 /usr/include/python3.10/cpython/fileutils.h:
 
 /usr/include/errno.h:
+
+rosidl_generator_c/test_package/srv/detail/is_success__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
@@ -727,6 +743,8 @@ rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
+
+rosidl_generator_c/test_package/msg/detail/manipulator_pose__type_support.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
 

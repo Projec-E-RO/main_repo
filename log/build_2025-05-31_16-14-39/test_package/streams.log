@@ -1,0 +1,309 @@
+[0.010s] Invoking command in '/home/messi/my_ws/build/test_package': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/messi/my_ws/build/test_package -- -j12 -l12
+[0.084s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.226s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.256s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.259s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.267s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.279s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.293s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.306s] -- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.358s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.583s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.836s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.933s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.953s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[0.972s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.972s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[0.973s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[0.984s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.004s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.005s] -- Added test 'lint_cmake' to check CMake code style
+[1.006s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.011s] -- Added test 'xmllint' to check XML markup files
+[1.014s] -- Configuring done
+[1.067s] -- Generating done
+[1.078s] -- Build files have been written to: /home/messi/my_ws/build/test_package
+[1.098s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.106s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.117s] [  4%] Built target ament_cmake_python_copy_test_package
+[1.377s] running egg_info
+[1.377s] writing test_package.egg-info/PKG-INFO
+[1.378s] writing dependency_links to test_package.egg-info/dependency_links.txt
+[1.378s] writing top-level names to test_package.egg-info/top_level.txt
+[1.381s] reading manifest file 'test_package.egg-info/SOURCES.txt'
+[1.381s] writing manifest file 'test_package.egg-info/SOURCES.txt'
+[1.406s] [  4%] Built target ament_cmake_python_build_test_package_egg
+[1.441s] [35m[1mConsolidate compiler generated dependencies of target test_package__rosidl_generator_c[0m
+[1.456s] [  8%] [32mBuilding C object CMakeFiles/test_package__rosidl_generator_c.dir/rosidl_generator_c/test_package/msg/detail/robot_pose__functions.c.o[0m
+[1.456s] [  8%] [32mBuilding C object CMakeFiles/test_package__rosidl_generator_c.dir/rosidl_generator_c/test_package/msg/detail/manipulator_pose__functions.c.o[0m
+[1.456s] [ 10%] [32mBuilding C object CMakeFiles/test_package__rosidl_generator_c.dir/rosidl_generator_c/test_package/srv/detail/is_success__functions.c.o[0m
+[1.459s] [ 10%] Built target test_package__cpp
+[1.467s] [ 14%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.467s] [ 14%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.469s] [ 17%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.550s] [ 19%] [32m[1mLinking C shared library libtest_package__rosidl_generator_c.so[0m
+[1.588s] [ 19%] Built target test_package__rosidl_generator_c
+[1.596s] [ 23%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.597s] [ 23%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.597s] [ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.724s] [35m[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_cpp[0m
+[1.741s] [ 27%] [32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/test_package/msg/manipulator_pose__type_support.cpp.o[0m
+[1.742s] [ 29%] [32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/test_package/msg/robot_pose__type_support.cpp.o[0m
+[1.743s] [ 31%] [32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/test_package/srv/is_success__type_support.cpp.o[0m
+[1.770s] [35m[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_introspection_cpp[0m
+[1.785s] [ 36%] [32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/test_package/msg/detail/manipulator_pose__type_support.cpp.o[0m
+[1.785s] [ 38%] [32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/test_package/srv/detail/is_success__type_support.cpp.o[0m
+[1.785s] [ 38%] [32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/test_package/msg/detail/robot_pose__type_support.cpp.o[0m
+[1.814s] [35m[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_fastrtps_cpp[0m
+[1.829s] [ 40%] [32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/test_package/msg/detail/dds_fastrtps/robot_pose__type_support.cpp.o[0m
+[1.830s] [ 42%] [32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/test_package/msg/detail/dds_fastrtps/manipulator_pose__type_support.cpp.o[0m
+[1.831s] [ 44%] [32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/test_package/srv/detail/dds_fastrtps/is_success__type_support.cpp.o[0m
+[2.077s] [35m[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_c[0m
+[2.096s] [35m[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_introspection_c[0m
+[2.103s] [ 46%] [32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/robot_pose__type_support.cpp.o[0m
+[2.113s] [ 48%] [32mBuilding C object CMakeFiles/test_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/test_package/msg/detail/robot_pose__type_support.c.o[0m
+[2.180s] [ 51%] [32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/msg/manipulator_pose__type_support.cpp.o[0m
+[2.181s] [ 53%] [32mBuilding C object CMakeFiles/test_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/test_package/msg/detail/manipulator_pose__type_support.c.o[0m
+[2.227s] [ 55%] [32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/test_package/srv/is_success__type_support.cpp.o[0m
+[2.245s] [35m[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_fastrtps_c[0m
+[2.262s] [ 57%] [32mBuilding C object CMakeFiles/test_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/test_package/srv/detail/is_success__type_support.c.o[0m
+[2.268s] [ 59%] [32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/robot_pose__type_support_c.cpp.o[0m
+[2.270s] [ 61%] [32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/msg/detail/manipulator_pose__type_support_c.cpp.o[0m
+[2.274s] [ 63%] [32mBuilding CXX object CMakeFiles/test_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/test_package/srv/detail/is_success__type_support_c.cpp.o[0m
+[2.279s] [ 65%] [32m[1mLinking CXX shared library libtest_package__rosidl_typesupport_c.so[0m
+[2.336s] [ 68%] [32m[1mLinking C shared library libtest_package__rosidl_typesupport_introspection_c.so[0m
+[2.337s] [ 70%] [32m[1mLinking CXX shared library libtest_package__rosidl_typesupport_cpp.so[0m
+[2.348s] [ 70%] Built target test_package__rosidl_typesupport_c
+[2.376s] [ 70%] Built target test_package__rosidl_typesupport_introspection_c
+[2.394s] [ 70%] Built target test_package__rosidl_typesupport_cpp
+[2.433s] [ 72%] [32m[1mLinking CXX shared library libtest_package__rosidl_typesupport_introspection_cpp.so[0m
+[2.492s] [ 72%] Built target test_package__rosidl_typesupport_introspection_cpp
+[2.531s] [ 74%] [32m[1mLinking CXX shared library libtest_package__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.599s] [ 74%] Built target test_package__rosidl_typesupport_fastrtps_cpp
+[2.670s] [ 76%] [32m[1mLinking CXX shared library libtest_package__rosidl_typesupport_fastrtps_c.so[0m
+[2.727s] [ 76%] Built target test_package__rosidl_typesupport_fastrtps_c
+[2.744s] [ 76%] Built target test_package
+[2.761s] [ 78%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.220s] [ 78%] Built target test_package__py
+[3.229s] [35m[1mConsolidate compiler generated dependencies of target test_package__rosidl_generator_py[0m
+[3.241s] [ 85%] [32mBuilding C object CMakeFiles/test_package__rosidl_generator_py.dir/rosidl_generator_py/test_package/msg/_robot_pose_s.c.o[0m
+[3.241s] [ 85%] [32mBuilding C object CMakeFiles/test_package__rosidl_generator_py.dir/rosidl_generator_py/test_package/srv/_is_success_s.c.o[0m
+[3.241s] [ 85%] [32mBuilding C object CMakeFiles/test_package__rosidl_generator_py.dir/rosidl_generator_py/test_package/msg/_manipulator_pose_s.c.o[0m
+[3.368s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/test_package/libtest_package__rosidl_generator_py.so[0m
+[3.399s] [ 87%] Built target test_package__rosidl_generator_py
+[3.407s] [35m[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_c__pyext[0m
+[3.407s] [35m[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_fastrtps_c__pyext[0m
+[3.407s] [35m[1mConsolidate compiler generated dependencies of target test_package__rosidl_typesupport_introspection_c__pyext[0m
+[3.416s] [ 91%] [32mBuilding C object CMakeFiles/test_package__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[3.417s] [ 91%] [32mBuilding C object CMakeFiles/test_package__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_c.c.o[0m
+[3.417s] [ 93%] [32mBuilding C object CMakeFiles/test_package__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[3.506s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/test_package/test_package_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.506s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/test_package/test_package_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.507s] [100%] [32m[1mLinking C shared library rosidl_generator_py/test_package/test_package_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.535s] [100%] Built target test_package__rosidl_typesupport_fastrtps_c__pyext
+[3.535s] [100%] Built target test_package__rosidl_typesupport_c__pyext
+[3.536s] [100%] Built target test_package__rosidl_typesupport_introspection_c__pyext
+[3.547s] Invoked command in '/home/messi/my_ws/build/test_package' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/messi/my_ws/build/test_package -- -j12 -l12
+[3.555s] Invoking command in '/home/messi/my_ws/build/test_package': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/messi/my_ws/build/test_package
+[3.561s] -- Install configuration: ""
+[3.561s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/ament_index/resource_index/rosidl_interfaces/test_package
+[3.562s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package
+[3.562s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg
+[3.562s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/robot_pose.h
+[3.562s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail
+[3.562s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__functions.c
+[3.562s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__functions.h
+[3.562s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/manipulator_pose__struct.h
+[3.563s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__struct.h
+[3.563s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__type_support.h
+[3.563s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/manipulator_pose__functions.h
+[3.563s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/manipulator_pose__functions.c
+[3.563s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/manipulator_pose__type_support.h
+[3.563s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/rosidl_generator_c__visibility_control.h
+[3.563s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/manipulator_pose.h
+[3.563s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv
+[3.563s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/is_success.h
+[3.563s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail
+[3.563s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__struct.h
+[3.564s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__functions.h
+[3.564s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__functions.c
+[3.564s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__type_support.h
+[3.564s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/environment/library_path.sh
+[3.564s] -- Installing: /home/messi/my_ws/install/test_package/share/test_package/environment/library_path.dsv
+[3.564s] -- Installing: /home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_generator_c.so
+[3.564s] -- Set runtime path of "/home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_generator_c.so" to ""
+[3.564s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package
+[3.565s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg
+[3.565s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.565s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail
+[3.565s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/manipulator_pose__rosidl_typesupport_fastrtps_c.h
+[3.565s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_c.h
+[3.565s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv
+[3.565s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail
+[3.565s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__rosidl_typesupport_fastrtps_c.h
+[3.565s] -- Installing: /home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_fastrtps_c.so
+[3.565s] -- Set runtime path of "/home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_fastrtps_c.so" to ""
+[3.565s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package
+[3.565s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg
+[3.565s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.566s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/manipulator_pose.hpp
+[3.566s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail
+[3.566s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/manipulator_pose__struct.hpp
+[3.566s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__struct.hpp
+[3.566s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/manipulator_pose__builder.hpp
+[3.566s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__type_support.hpp
+[3.566s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/manipulator_pose__traits.hpp
+[3.566s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__builder.hpp
+[3.566s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__traits.hpp
+[3.566s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/manipulator_pose__type_support.hpp
+[3.566s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/robot_pose.hpp
+[3.566s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv
+[3.566s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/is_success.hpp
+[3.566s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail
+[3.567s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__traits.hpp
+[3.567s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__type_support.hpp
+[3.567s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__builder.hpp
+[3.567s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__struct.hpp
+[3.567s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package
+[3.567s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg
+[3.567s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.567s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail
+[3.567s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[3.567s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/dds_fastrtps
+[3.567s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/manipulator_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[3.567s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv
+[3.567s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail
+[3.567s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/dds_fastrtps
+[3.567s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__rosidl_typesupport_fastrtps_cpp.hpp
+[3.568s] -- Installing: /home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_fastrtps_cpp.so
+[3.568s] -- Set runtime path of "/home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_fastrtps_cpp.so" to ""
+[3.568s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package
+[3.568s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg
+[3.568s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.568s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail
+[3.568s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__type_support.c
+[3.568s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/manipulator_pose__rosidl_typesupport_introspection_c.h
+[3.568s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/manipulator_pose__type_support.c
+[3.569s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__rosidl_typesupport_introspection_c.h
+[3.569s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv
+[3.569s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail
+[3.569s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__rosidl_typesupport_introspection_c.h
+[3.569s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__type_support.c
+[3.569s] -- Installing: /home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_introspection_c.so
+[3.569s] -- Set runtime path of "/home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_introspection_c.so" to ""
+[3.569s] -- Installing: /home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_c.so
+[3.569s] -- Set runtime path of "/home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_c.so" to ""
+[3.569s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package
+[3.569s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg
+[3.569s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail
+[3.569s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__type_support.cpp
+[3.570s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/robot_pose__rosidl_typesupport_introspection_cpp.hpp
+[3.570s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/manipulator_pose__type_support.cpp
+[3.570s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/msg/detail/manipulator_pose__rosidl_typesupport_introspection_cpp.hpp
+[3.570s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv
+[3.570s] -- Up-to-date: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail
+[3.570s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__type_support.cpp
+[3.570s] -- Installing: /home/messi/my_ws/install/test_package/include/test_package/test_package/srv/detail/is_success__rosidl_typesupport_introspection_cpp.hpp
+[3.570s] -- Installing: /home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_introspection_cpp.so
+[3.571s] -- Set runtime path of "/home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_introspection_cpp.so" to ""
+[3.571s] -- Installing: /home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_cpp.so
+[3.571s] -- Set runtime path of "/home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_typesupport_cpp.so" to ""
+[3.572s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/environment/pythonpath.sh
+[3.572s] -- Installing: /home/messi/my_ws/install/test_package/share/test_package/environment/pythonpath.dsv
+[3.572s] -- Up-to-date: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package-0.0.0-py3.10.egg-info
+[3.572s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package-0.0.0-py3.10.egg-info/top_level.txt
+[3.572s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package-0.0.0-py3.10.egg-info/SOURCES.txt
+[3.572s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package-0.0.0-py3.10.egg-info/dependency_links.txt
+[3.572s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package-0.0.0-py3.10.egg-info/PKG-INFO
+[3.572s] -- Up-to-date: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package
+[3.572s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.572s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.572s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.572s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/libtest_package__rosidl_generator_py.so
+[3.573s] -- Up-to-date: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg
+[3.573s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg/_robot_pose.py
+[3.573s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg/_robot_pose_s.c
+[3.573s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg/__init__.py
+[3.573s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg/_manipulator_pose.py
+[3.573s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg/_manipulator_pose_s.c
+[3.573s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/_test_package_s.ep.rosidl_typesupport_introspection_c.c
+[3.573s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.573s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/_test_package_s.ep.rosidl_typesupport_c.c
+[3.573s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/__init__.py
+[3.573s] -- Up-to-date: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/srv
+[3.573s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/srv/_is_success_s.c
+[3.574s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/srv/__init__.py
+[3.574s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/srv/_is_success.py
+[3.605s] Listing '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package'...
+[3.605s] Compiling '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/__init__.py'...
+[3.605s] Listing '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg'...
+[3.605s] Compiling '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg/__init__.py'...
+[3.605s] Compiling '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg/_manipulator_pose.py'...
+[3.605s] Compiling '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/msg/_robot_pose.py'...
+[3.605s] Listing '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/srv'...
+[3.605s] Compiling '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/srv/__init__.py'...
+[3.605s] Compiling '/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/srv/_is_success.py'...
+[3.609s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.609s] -- Set runtime path of "/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.609s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.609s] -- Set runtime path of "/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.610s] -- Installing: /home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.610s] -- Set runtime path of "/home/messi/my_ws/install/test_package/local/lib/python3.10/dist-packages/test_package/test_package_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.610s] -- Installing: /home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_generator_py.so
+[3.610s] -- Set runtime path of "/home/messi/my_ws/install/test_package/lib/libtest_package__rosidl_generator_py.so" to ""
+[3.610s] -- Installing: /home/messi/my_ws/install/test_package/share/test_package/msg/RobotPose.idl
+[3.610s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/msg/ManipulatorPose.idl
+[3.611s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/srv/IsSuccess.idl
+[3.611s] -- Installing: /home/messi/my_ws/install/test_package/share/test_package/msg/RobotPose.msg
+[3.611s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/msg/ManipulatorPose.msg
+[3.611s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/srv/IsSuccess.srv
+[3.611s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/srv/IsSuccess_Request.msg
+[3.611s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/srv/IsSuccess_Response.msg
+[3.611s] -- Up-to-date: /home/messi/my_ws/install/test_package/lib/test_package/go_to_pose.py
+[3.611s] -- Installing: /home/messi/my_ws/install/test_package/lib/test_package/go_to_pose2.py
+[3.611s] -- Up-to-date: /home/messi/my_ws/install/test_package/lib/test_package/point_publisher.py
+[3.611s] -- Up-to-date: /home/messi/my_ws/install/test_package/lib/test_package/tf_listener.py
+[3.611s] -- Up-to-date: /home/messi/my_ws/install/test_package/lib/test_package/main_process_test.py
+[3.611s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/launch/launch
+[3.612s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/launch/launch/manipulator_all_pickNodes.py
+[3.612s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/launch/launch/manipulator_bringup_all.launch.py
+[3.612s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/ament_index/resource_index/package_run_dependencies/test_package
+[3.612s] -- Installing: /home/messi/my_ws/install/test_package/share/ament_index/resource_index/parent_prefix_path/test_package
+[3.612s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/environment/ament_prefix_path.sh
+[3.612s] -- Installing: /home/messi/my_ws/install/test_package/share/test_package/environment/ament_prefix_path.dsv
+[3.612s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/environment/path.sh
+[3.612s] -- Installing: /home/messi/my_ws/install/test_package/share/test_package/environment/path.dsv
+[3.612s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/local_setup.bash
+[3.612s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/local_setup.sh
+[3.612s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/local_setup.zsh
+[3.613s] -- Installing: /home/messi/my_ws/install/test_package/share/test_package/local_setup.dsv
+[3.613s] -- Installing: /home/messi/my_ws/install/test_package/share/test_package/package.dsv
+[3.613s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/ament_index/resource_index/packages/test_package
+[3.613s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_generator_cExport.cmake
+[3.613s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_generator_cExport-noconfig.cmake
+[3.613s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_typesupport_fastrtps_cExport.cmake
+[3.613s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.613s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_generator_cppExport.cmake
+[3.614s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.614s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.614s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_package__rosidl_typesupport_introspection_cExport.cmake
+[3.614s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_package__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.614s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_package__rosidl_typesupport_cExport.cmake
+[3.614s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_package__rosidl_typesupport_cExport-noconfig.cmake
+[3.614s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_package__rosidl_typesupport_introspection_cppExport.cmake
+[3.614s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_package__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.615s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_package__rosidl_typesupport_cppExport.cmake
+[3.615s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_package__rosidl_typesupport_cppExport-noconfig.cmake
+[3.615s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_generator_pyExport.cmake
+[3.615s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/export_test_package__rosidl_generator_pyExport-noconfig.cmake
+[3.615s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/rosidl_cmake-extras.cmake
+[3.615s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.615s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.615s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/ament_cmake_export_libraries-extras.cmake
+[3.615s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/ament_cmake_export_targets-extras.cmake
+[3.615s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.615s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.615s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_packageConfig.cmake
+[3.615s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/cmake/test_packageConfig-version.cmake
+[3.615s] -- Up-to-date: /home/messi/my_ws/install/test_package/share/test_package/package.xml
+[3.617s] Invoked command in '/home/messi/my_ws/build/test_package' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/messi/my_ws/build/test_package

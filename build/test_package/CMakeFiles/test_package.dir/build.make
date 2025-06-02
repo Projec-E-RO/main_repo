@@ -67,6 +67,10 @@ include CMakeFiles/test_package.dir/compiler_depend.make
 include CMakeFiles/test_package.dir/progress.make
 
 CMakeFiles/test_package: /home/messi/my_ws/src/test_package/msg/RobotPose.msg
+CMakeFiles/test_package: /home/messi/my_ws/src/test_package/msg/ManipulatorPose.msg
+CMakeFiles/test_package: /home/messi/my_ws/src/test_package/srv/IsSuccess.srv
+CMakeFiles/test_package: rosidl_cmake/srv/IsSuccess_Request.msg
+CMakeFiles/test_package: rosidl_cmake/srv/IsSuccess_Response.msg
 CMakeFiles/test_package: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 CMakeFiles/test_package: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 

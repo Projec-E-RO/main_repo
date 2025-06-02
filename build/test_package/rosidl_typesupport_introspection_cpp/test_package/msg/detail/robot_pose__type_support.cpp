@@ -37,7 +37,7 @@ void RobotPose_fini_function(void * message_memory)
   typed_message->~RobotPose();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember RobotPose_message_member_array[4] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember RobotPose_message_member_array[5] = {
   {
     "x",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
@@ -105,13 +105,30 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RobotPose_mes
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "gripper_open",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(test_package::msg::RobotPose, gripper_open),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers RobotPose_message_members = {
   "test_package::msg",  // message namespace
   "RobotPose",  // message name
-  4,  // number of fields
+  5,  // number of fields
   sizeof(test_package::msg::RobotPose),
   RobotPose_message_member_array,  // message members
   RobotPose_init_function,  // function to initialize message memory (memory has to be allocated)

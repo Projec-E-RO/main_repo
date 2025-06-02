@@ -35,7 +35,7 @@ void test_package__msg__RobotPose__rosidl_typesupport_introspection_c__RobotPose
   test_package__msg__RobotPose__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember test_package__msg__RobotPose__rosidl_typesupport_introspection_c__RobotPose_message_member_array[4] = {
+static rosidl_typesupport_introspection_c__MessageMember test_package__msg__RobotPose__rosidl_typesupport_introspection_c__RobotPose_message_member_array[5] = {
   {
     "x",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
@@ -103,13 +103,30 @@ static rosidl_typesupport_introspection_c__MessageMember test_package__msg__Robo
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "gripper_open",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(test_package__msg__RobotPose, gripper_open),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers test_package__msg__RobotPose__rosidl_typesupport_introspection_c__RobotPose_message_members = {
   "test_package__msg",  // message namespace
   "RobotPose",  // message name
-  4,  // number of fields
+  5,  // number of fields
   sizeof(test_package__msg__RobotPose),
   test_package__msg__RobotPose__rosidl_typesupport_introspection_c__RobotPose_message_member_array,  // message members
   test_package__msg__RobotPose__rosidl_typesupport_introspection_c__RobotPose_init_function,  // function to initialize message memory (memory has to be allocated)

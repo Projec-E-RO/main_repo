@@ -40,6 +40,8 @@ cdr_serialize(
   cdr << ros_message.z;
   // Member: label
   cdr << ros_message.label;
+  // Member: gripper_open
+  cdr << (ros_message.gripper_open ? true : false);
   return true;
 }
 
@@ -60,6 +62,13 @@ cdr_deserialize(
 
   // Member: label
   cdr >> ros_message.label;
+
+  // Member: gripper_open
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.gripper_open = tmp ? true : false;
+  }
 
   return true;
 }
@@ -99,6 +108,12 @@ get_serialized_size(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message.label.size() + 1);
+  // Member: gripper_open
+  {
+    size_t item_size = sizeof(ros_message.gripper_open);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -163,6 +178,14 @@ max_serialized_size_RobotPose(
     }
   }
 
+  // Member: gripper_open
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -171,7 +194,7 @@ max_serialized_size_RobotPose(
     using DataType = test_package::msg::RobotPose;
     is_plain =
       (
-      offsetof(DataType, label) +
+      offsetof(DataType, gripper_open) +
       last_member_size
       ) == ret_val;
   }

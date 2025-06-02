@@ -15,8 +15,13 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_c.c" "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_introspection_c.c" "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/msg/__init__.py" "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/msg/_manipulator_pose.py" "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/msg/_manipulator_pose_s.c" "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/msg/_robot_pose.py" "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/msg/_robot_pose_s.c" "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/srv/__init__.py" "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/srv/_is_success.py" "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/srv/_is_success_s.c" "/home/messi/my_ws/build/test_package/rosidl_generator_py/test_package/_test_package_s.ep.rosidl_typesupport_fastrtps_c.c"
   )
 
 

@@ -5,4 +5,7 @@ test_package.egg-info/SOURCES.txt
 test_package.egg-info/dependency_links.txt
 test_package.egg-info/top_level.txt
 test_package/msg/__init__.py
+test_package/msg/_manipulator_pose.py
 test_package/msg/_robot_pose.py
+test_package/srv/__init__.py
+test_package/srv/_is_success.py

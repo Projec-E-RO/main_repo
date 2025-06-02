@@ -80,6 +80,11 @@ static bool _RobotPose__cdr_serialize(
     cdr << str->data;
   }
 
+  // Field name: gripper_open
+  {
+    cdr << (ros_message->gripper_open ? true : false);
+  }
+
   return true;
 }
 
@@ -123,6 +128,13 @@ static bool _RobotPose__cdr_deserialize(
     }
   }
 
+  // Field name: gripper_open
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->gripper_open = tmp ? true : false;
+  }
+
   return true;
 }  // NOLINT(readability/fn_size)
 
@@ -162,6 +174,12 @@ size_t get_serialized_size_test_package__msg__RobotPose(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->label.size + 1);
+  // field.name gripper_open
+  {
+    size_t item_size = sizeof(ros_message->gripper_open);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -227,6 +245,13 @@ size_t max_serialized_size_test_package__msg__RobotPose(
         1;
     }
   }
+  // member: gripper_open
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -236,7 +261,7 @@ size_t max_serialized_size_test_package__msg__RobotPose(
     using DataType = test_package__msg__RobotPose;
     is_plain =
       (
-      offsetof(DataType, label) +
+      offsetof(DataType, gripper_open) +
       last_member_size
       ) == ret_val;
   }

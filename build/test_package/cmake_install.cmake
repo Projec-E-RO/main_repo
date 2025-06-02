@@ -360,7 +360,31 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_package/msg" TYPE FILE FILES "/home/messi/my_ws/build/test_package/rosidl_adapter/test_package/msg/ManipulatorPose.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_package/srv" TYPE FILE FILES "/home/messi/my_ws/build/test_package/rosidl_adapter/test_package/srv/IsSuccess.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_package/msg" TYPE FILE FILES "/home/messi/my_ws/src/test_package/msg/RobotPose.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_package/msg" TYPE FILE FILES "/home/messi/my_ws/src/test_package/msg/ManipulatorPose.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_package/srv" TYPE FILE FILES "/home/messi/my_ws/src/test_package/srv/IsSuccess.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_package/srv" TYPE FILE FILES "/home/messi/my_ws/build/test_package/rosidl_cmake/srv/IsSuccess_Request.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_package/srv" TYPE FILE FILES "/home/messi/my_ws/build/test_package/rosidl_cmake/srv/IsSuccess_Response.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -369,6 +393,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/messi/my_ws/src/test_package/src/go_to_pose2.py"
     "/home/messi/my_ws/src/test_package/src/point_publisher.py"
     "/home/messi/my_ws/src/test_package/src/tf_listener.py"
+    "/home/messi/my_ws/src/test_package/src/main_process_test.py"
     )
 endif()
 

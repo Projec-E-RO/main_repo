@@ -13,6 +13,8 @@ module test_package {
       float z;
 
       string label;
+
+      boolean gripper_open;
     };
   };
 };

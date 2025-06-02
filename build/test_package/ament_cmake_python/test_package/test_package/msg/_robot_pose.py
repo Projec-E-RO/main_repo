@@ -61,6 +61,7 @@ class RobotPose(metaclass=Metaclass_RobotPose):
         '_y',
         '_z',
         '_label',
+        '_gripper_open',
     ]
 
     _fields_and_field_types = {
@@ -68,6 +69,7 @@ class RobotPose(metaclass=Metaclass_RobotPose):
         'y': 'float',
         'z': 'float',
         'label': 'string',
+        'gripper_open': 'boolean',
     }
 
     SLOT_TYPES = (
@@ -75,6 +77,7 @@ class RobotPose(metaclass=Metaclass_RobotPose):
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -85,6 +88,7 @@ class RobotPose(metaclass=Metaclass_RobotPose):
         self.y = kwargs.get('y', float())
         self.z = kwargs.get('z', float())
         self.label = kwargs.get('label', str())
+        self.gripper_open = kwargs.get('gripper_open', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -122,6 +126,8 @@ class RobotPose(metaclass=Metaclass_RobotPose):
         if self.z != other.z:
             return False
         if self.label != other.label:
+            return False
+        if self.gripper_open != other.gripper_open:
             return False
         return True
 
@@ -187,3 +193,16 @@ class RobotPose(metaclass=Metaclass_RobotPose):
                 isinstance(value, str), \
                 "The 'label' field must be of type 'str'"
         self._label = value
+
+    @builtins.property
+    def gripper_open(self):
+        """Message field 'gripper_open'."""
+        return self._gripper_open
+
+    @gripper_open.setter
+    def gripper_open(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'gripper_open' field must be of type 'bool'"
+        self._gripper_open = value

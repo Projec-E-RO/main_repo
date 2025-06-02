@@ -13,6 +13,8 @@ find_package(rosidl_default_generators REQUIRED)
 # 메시지 파일 있으면 추가, 없으면 주석 처리
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/RobotPose.msg"
+  "msg/ManipulatorPose.msg"
+  "srv/IsSuccess.srv"
   DEPENDENCIES builtin_interfaces
 )
 
@@ -31,6 +33,7 @@ install(
   src/go_to_pose2.py
   src/point_publisher.py
   src/tf_listener.py
+  src/main_process_test.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

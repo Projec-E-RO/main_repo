@@ -1,0 +1,12 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from test_package/msg/ManipulatorPose.msg
+// generated code does not contain a copyright notice
+
+
+module test_package {
+  module msg {
+    struct ManipulatorPose {
+      string button_type;
+    };
+  };
+};
